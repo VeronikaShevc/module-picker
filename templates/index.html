@@ -4,7 +4,11 @@
     <title>Module Picker</title>
 </head>
 <body>
-    <h1>St Andrews CS Module Picker</h1>
-    <p>Coming soon.</p>
+    <h1>Select a Module</h1>
+    <ul>
+        {% for code, details in modules.items() %}
+            <li>{{code}} - {{details.name}}{{details.credits}} credits</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
