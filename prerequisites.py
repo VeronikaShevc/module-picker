@@ -31,5 +31,20 @@ def has_ug_pgt_split(text):
 # plain_string = "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002"
 # print(has_ug_pgt_split(plain_string))
 
+# split_string = "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101). PGT: CS5001 OR CS5002"
+# print(has_ug_pgt_split(split_string))
+
+
+def split_ug_pgt(text):
+    if "UG:" in text or "UNDERGRADUATE" in text:
+        ug_text = text.split("PGT:")[0]
+        pgt_text = text.split("PGT:")[1]
+        return ug_text, pgt_text
+    else:
+        return text, None
+    
 split_string = "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101). PGT: CS5001 OR CS5002"
-print(has_ug_pgt_split(split_string))
+print(split_ug_pgt(split_string))
+
+plain_string = "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002"
+print(split_ug_pgt(plain_string))
