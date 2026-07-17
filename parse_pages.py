@@ -18,6 +18,7 @@ for filename in os.listdir("pages"):
 
     print(code, "-", name, "-", credits, "-", assessment, "-", prerequisites, "-", semester)
 
+
     all_modules[code] = {
         "name": name,
         "credits": credits,

@@ -82,11 +82,26 @@ result = substitute_booleans(prereq, passed, all_codes)
 print(result)
 
 
+def clean_prereq_string(text, all_codes):
+    words = text.replace("(", " ( ").replace(")", " ) ").split()
+    keep = []
+    for word in words:
+        if word in all_codes or word in ["AND", "OR", "(", ")"]:
+            keep.append(word)
+    return " ".join(keep)
+
+
+
+
 def evaluate_prereq(text, passed_modules, all_codes):
-    substituted = substitute_booleans(text, passed_modules, all_codes)
+    cleaned = clean_prereq_string(text, all_codes)
+    substituted = substitute_booleans(cleaned, passed_modules, all_codes)
     substituted = substituted.replace("AND", "and").replace("OR", "or")
     result = eval(substituted)
     return result
+
+
+
 
 prereq = "CS2002 AND ( CS2101 OR CS2001 )"
 passed = {"CS2002", "CS2001"}
@@ -95,3 +110,15 @@ print(evaluate_prereq(prereq, passed, all_codes))
 
 passed = {"CS2002"}
 print(evaluate_prereq(prereq, passed, all_codes))
+
+
+real_prereq = modules_data["CS3050"]["prerequisites"]
+print(real_prereq)
+print(evaluate_prereq(real_prereq, {"CS2002", "CS2001"}, all_codes))
+
+
+real_prereq = modules_data["CS3050"]["prerequisites"]
+cleaned = clean_prereq_string(real_prereq, all_codes)
+print(cleaned)
+
+
