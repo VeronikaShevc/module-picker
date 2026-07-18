@@ -38,13 +38,13 @@ def find_codes_in_string(text, all_know_codes):
 # print(has_ug_pgt_split(split_string))
 
 
-# def split_ug_pgt(text):
-#     if "UG:" in text or "UNDERGRADUATE" in text:
-#         ug_text = text.split("PGT:")[0]
-#         pgt_text = text.split("PGT:" or "POSTGRADUATE")[1]
-#         return ug_text, pgt_text
-#     else:
-#         return text, None
+def split_ug_pgt(text):
+    if "PGT:" in text:
+        ug_text = text.split("PGT:")[0]
+        pgt_text = text.split("PGT:")[1]
+        return ug_text, pgt_text
+    else:
+        return text, None
     
 # split_string = "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101). PGT: CS5001 OR CS5002"
 # print(split_ug_pgt(split_string))
@@ -94,7 +94,9 @@ def clean_prereq_string(text, all_codes):
 
 
 def evaluate_prereq(text, passed_modules, all_codes):
-    cleaned = clean_prereq_string(text, all_codes)
+    ug_text, pgt_text = split_ug_pgt(text)
+    
+    cleaned = clean_prereq_string(ug_text, all_codes)
     substituted = substitute_booleans(cleaned, passed_modules, all_codes)
     substituted = substituted.replace("AND", "and").replace("OR", "or")
     result = eval(substituted)
