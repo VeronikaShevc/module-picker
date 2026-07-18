@@ -43,6 +43,10 @@ def split_ug_pgt(text):
         ug_text = text.split("PGT:")[0]
         pgt_text = text.split("PGT:")[1]
         return ug_text, pgt_text
+    elif "POSTGRADUATE" in text:
+        ug_text = text.split("POSTGRADUATE")[0]
+        pgt_text = text.split("POSTGRADUATE")[1]
+        return ug_text, pgt_text
     else:
         return text, None
     
