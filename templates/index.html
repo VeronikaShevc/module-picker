@@ -17,9 +17,12 @@
         <a href="/?year=5">Year 5/Masters</a> |
     </p>
     <ul>
-        {% for code, details in modules.items() %}
-            <li>{{code}} - {{details.name}} - {{details.credits}} credits - {{details.semester}} semester</li>
-        {% endfor %}
+        <form method="get" action="/check">
+            {% for code, details in modules.items() %}
+                <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}<br>
+            {% endfor %}        
+            <button type="submit">Check eligibility</button>
+        </form>
     </ul>
 </body>
 </html>
