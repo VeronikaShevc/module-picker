@@ -2,22 +2,24 @@
 <html>
 <head>
     <title>Module Picker</title>
-    <link rel="stylesheet" href="/static/style.css"
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <div class="content">
         <h1>Select a Module</h1>
-        <p> 
-            <a href="/">All</a> |
-            <a href="/?semester=1">Semester 1</a> |
-            <a href="/?semester=2">Semester 2</a> |
-            <a href="/?semester=Whole Year">Whole Year</a> |
+        <div class="year-nav">
             <a href="/?year=1">Year 1</a> |
             <a href="/?year=2">Year 2</a> |
             <a href="/?year=3">Year 3</a> |
             <a href="/?year=4">Year 4</a> |
-            <a href="/?year=5">Year 5/Masters</a> |
-        </p>
+            <a href="/?year=5">Year 5/Masters</a>
+        </div>
+        <div class="semester-nav">
+            <a href="/">All</a> |
+            <a href="/?semester=1">Semester 1</a> |
+            <a href="/?semester=2">Semester 2</a> |
+            <a href="/?semester=Whole Year">Whole Year</a> |
+        </div>
         <ul>
             <form method="get" action="/check">
                 {% for code, details in modules.items() %}
