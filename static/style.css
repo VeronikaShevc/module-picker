@@ -82,3 +82,15 @@ a {
 .semester-nav a {
     color: #008cff;
 }
+
+.status-eligible {
+    background-color: lightgreen;
+}
+
+.status-not_eligible {
+    background-color: lightcoral;
+}
+
+.status-unclear {
+    background-color: khaki;
+}

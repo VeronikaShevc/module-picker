@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Eligibility Check</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
     <h1>Eligibility Check Results</h1>
@@ -18,7 +19,7 @@
             <tr>
                 <td>{{code}}</td>
                 <td>{{modules[code].name}}</td>
-                <td>
+                <td class="status-{{status}}">
                     {% if status=="eligible" %}
                         Eligible
                     {% elif status=="not_eligible" %}
