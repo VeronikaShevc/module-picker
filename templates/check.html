@@ -18,7 +18,17 @@
             <tr>
                 <td>{{code}}</td>
                 <td>{{modules[code].name}}</td>
-                <td>{{"Eligible" if status else "Not Eligible"}}</td>
+                <td>
+                    {% if status=="eligible" %}
+                        Eligible
+                    {% elif status=="not_eligible" %}
+                        Not Eligible
+                    {% elif status=="unclear" %}
+                        Unclear
+                    {% else %}
+                        Unknown
+                    {% endif %}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
