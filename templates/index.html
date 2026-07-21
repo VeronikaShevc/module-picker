@@ -7,15 +7,15 @@
 <body>
     <div class="content">
         <h1>Select a Module</h1>
+        <div class="year-nav">
+            <a href="/?last_year=0">New arrival / finished school</a>
+            <a href="/?last_year=1">I finished Year 1</a>
+            <a href="/?last_year=2">I finished Year 2</a>
+            <a href="/?last_year=3">I finished Year 3</a>
+            <a href="/?last_year=4">I finished Year 4</a>
+            <a href="/?last_year=5">All</a>
+        </div>
         <ul>
-            <div class="year-nav">
-                <a href="/?last_year=0">New arrival / finished school</a>
-                <a href="/?last_year=1">I finished Year 1</a>
-                <a href="/?last_year=2">I finished Year 2</a>
-                <a href="/?last_year=3">I finished Year 3</a>
-                <a href="/?last_year=4">I finished Year 4</a>
-                <a href="/?last_year=5">All</a>
-            </div>
             <form method="get" action="/check">
                 {% for code, details in modules.items() %}
                     <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}<br>

@@ -1,6 +1,10 @@
 import requests
 import time
 
+# # Semester numbers are hardcoded here because we need them to build the
+# correct fetch URL before we've downloaded the page. The actual semester
+# used in the app's data comes from parse_pages.py, which scrapes it
+# directly from each page's content.
 modules = {
     # Semester 1
     "CS1002": 1, "CS1007": 1, "IS1901": 1,
