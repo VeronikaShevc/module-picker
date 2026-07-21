@@ -29,7 +29,7 @@ async def read_item(request: Request, semester: str = None, year: str = None):
 from fastapi import Query
 
 @app.get("/check", response_class=HTMLResponse)
-async def check_eligibility(request: Request, passed: list[str] = Query(default=[])):
+async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None)):
     from prerequisites import evaluate_prereq, all_codes
     passed_set = set(passed)
     results = {}
@@ -45,4 +45,12 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
                 if is_eligible: results[code] = "eligible"
                 else: results[code] = "not_eligible"
             except Exception as e: results[code] = "unclear"
+    if last_year=="1":
+        results = {code: status for code, status in results.items() if code[2] == "2"}
+    elif last_year=="2":
+        results = {code: status for code, status in results.items() if code[2] == "3"}
+    elif last_year=="3":
+        results = {code: status for code, status in results.items() if code[2] in ["3", "4", "5"]}
+    elif last_year=="4":
+        results = {code: status for code, status in results.items() if code[2] == "4"}
     return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data})

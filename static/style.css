@@ -59,30 +59,6 @@ a {
     margin: 0;
 }
 
-.year-nav{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #ac0095;
-    padding: 40px;
-}
-
-.semester-nav{
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #008cff;
-    padding: 10px;
-}
-
-.year-nav a {
-    color: #ac0095;
-}
-
-.semester-nav a {
-    color: #008cff;
-}
-
 .status-eligible {
     background-color: lightgreen;
 }
