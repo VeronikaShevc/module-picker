@@ -8,12 +8,14 @@
     <div class="content">
         <h1>Select a Module</h1>
         <ul>
+            <div class="year-nav">
+                <a href="/?last_year=1">I finished Year 1</a>
+                <a href="/?last_year=2">I finished Year 2</a>
+                <a href="/?last_year=3">I finished Year 3</a>
+                <a href="/?last_year=4">I finished Year 4</a>
+                <a href="/?last_year=5">All</a>
+            </div>
             <form method="get" action="/check">
-                <input type="radio" name="last_year" value="1"> Year 1
-                <input type="radio" name="last_year" value="2"> Year 2
-                <input type="radio" name="last_year" value="3"> Year 3
-                <input type="radio" name="last_year" value="4"> Year 4
-                <input type="radio" name="last_year" value="5"> None
                 {% for code, details in modules.items() %}
                     <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}<br>
                 {% endfor %}        

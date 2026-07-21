@@ -17,12 +17,22 @@ templates = Jinja2Templates(directory="templates")
 
 
 @app.get("/", response_class=HTMLResponse)
-async def read_item(request: Request, semester: str = None, year: str = None):
+async def read_item(request: Request, semester: str = None, year: str = None, last_year: str = None):
     filtered = modules_data
     if semester:
         filtered = {code: details for code, details in filtered.items() if details["semester"] == semester}
     if year:
         filtered = {code: details for code, details in filtered.items() if code[2] == year}
+    if last_year == "1":
+        filtered = {code: details for code, details in filtered.items() if code[2] == "2"}
+    elif last_year == "2":
+        filtered = {code: details for code, details in filtered.items() if code[2] == "3"}
+    elif last_year == "3":
+        filtered = {code: details for code, details in filtered.items() if code[2] in ["3", "4", "5"]}
+    elif last_year == "4":
+        filtered = {code: details for code, details in filtered.items() if code[2] in ["4", "5"]}
+    elif last_year == "5":
+        filtered = {code: details for code, details in filtered.items() if code[2] in ["1", "2", "3", "4", "5"]}
     return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered})
 
 
