@@ -17,6 +17,7 @@
         </div>
         <ul>
             <form method="get" action="/check">
+                <input type="hidden" name="last_year" value="{{ last_year }}">
                 {% for code, details in modules.items() %}
                     <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}<br>
                 {% endfor %}        
