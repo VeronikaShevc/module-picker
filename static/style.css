@@ -70,3 +70,7 @@ a {
 .status-unclear {
     background-color: khaki;
 }
+
+.status-pending {
+    background-color: #ffe4a3;
+}
