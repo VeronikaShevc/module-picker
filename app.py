@@ -16,7 +16,7 @@ templates = Jinja2Templates(directory="templates")
 def filter_by_last_year(data, last_year, mode):
     if mode == "checklist":
         if last_year in ["0", "1", "2", "3", "4", "5"]:
-            return {code: value for code, value in data.items() if code[2] == last_year}
+            return {code: value for code, value in data.items() if code[2] <= last_year}
     elif mode == "results":
         if last_year == "0":
             return {code: value for code, value in data.items() if code[2] == "1"}
