@@ -41,6 +41,20 @@ def clean_prereq_string(text, all_codes):
             keep.append(word)
     return " ".join(keep)
 
+def get_necessary_missing(text, passed_modules, all_codes):
+    # Only count a missing code as truly necessary if adding it alone
+    # actually flips the result to True. This correctly ignores codes
+    # in an OR clause that's already satisfied another way.
+    mentioned = find_codes_in_string(text, all_codes)
+    necessary = []
+    for code in mentioned:
+        if code in passed_modules:
+            continue
+        trial = set(passed_modules) | {code}
+        if evaluate_prereq(text, trial, all_codes):
+            necessary.append(code)
+    return necessary
+
 def evaluate_prereq(text, passed_modules, all_codes):
     ug_text, pgt_text = split_ug_pgt(text)
     
