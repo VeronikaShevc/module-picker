@@ -12,6 +12,7 @@
                 <th>Module Code</th>
                 <th>Module Name</th>
                 <th>Status</th>
+                <th>Prerequisites</th>
             </tr>
         </thead>
         <tbody>
@@ -26,10 +27,13 @@
                         Not Eligible
                     {% elif status=="unclear" %}
                         Unclear
+                    {% elif status=="pending" %}
+                        Pending: complete {{ pending_info[code] | join(", ") }} first
                     {% else %}
                         Unknown
                     {% endif %}
                 </td>
+                <td>{{modules[code].prerequisites}}</td>
             </tr>
             {% endfor %}
         </tbody>
