@@ -48,7 +48,9 @@ async def read_item(request: Request, semester: str = None, year: str = None, la
 async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None)):
     passed_set = set(passed)
     pending_info = {}
-
+    if last_year == "0":
+        results = {code: "eligible" for code, details in modules_data.items() if code[2] == "1"}
+        return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": pending_info})
     results = {}
     for code, details in modules_data.items():
         prereq_string = details["prerequisites"]
