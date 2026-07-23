@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from prerequisites import evaluate_prereq, get_necessary_missing, all_codes
+from prerequisites import evaluate_prereq, find_codes_in_string, get_necessary_missing, all_codes
 import json
 
 with open("modules.json", "r") as f:
@@ -53,6 +53,13 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
         return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": pending_info})
     results = {}
     for code, details in modules_data.items():
+        anti_req_string = details.get("anti_requisites", "None")
+        if anti_req_string != "None":
+            mentioned_codes = find_codes_in_string(anti_req_string, all_codes)
+            if mentioned_codes and evaluate_prereq(anti_req_string, passed_set, all_codes):
+                results[code] = "not_eligible"
+                continue
+
         prereq_string = details["prerequisites"]
         if prereq_string == "None":
             results[code] = "eligible"
