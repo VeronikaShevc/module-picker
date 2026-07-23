@@ -16,6 +16,8 @@ for filename in os.listdir("pages"):
     prereq_tag = soup.find("p", id="prerequisites")
     prerequisites = prereq_tag.text.strip() if prereq_tag else "None"
     semester = soup.find("p", class_="font-scale-3").text.strip().split("Semester ")[1] if "Semester " in soup.find("p", class_="font-scale-3").text.strip() else "Whole Year"
+    antireq_heading = soup.find("h3", string="Anti-requisites")
+    anti_requisites = antireq_heading.find_next("p").text.strip() if antireq_heading else "None"
 
     # print(code, "-", name, "-", credits, "-", assessment, "-", prerequisites, "-", semester)
 
@@ -25,7 +27,8 @@ for filename in os.listdir("pages"):
         "credits": credits,
         "assessment": assessment,
         "prerequisites": prerequisites,
-        "semester": semester
+        "semester": semester,
+        "anti_requisites": anti_requisites
     }
 
 with open("modules.json", "w") as f:
