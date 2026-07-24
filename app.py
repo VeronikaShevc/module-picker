@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 from prerequisites import evaluate_prereq, find_codes_in_string, get_necessary_missing, all_codes
 import json
 
+# Load all the scraped module data once
 with open("modules.json", "r") as f:
     modules_data = json.load(f)
 
@@ -18,10 +19,18 @@ def filter_by_last_year(data, last_year, mode):
     student's last completed year. 'checklist' mode shows everything up
     to and including that year (for ticking what's passed). 'results'
     mode shows what opens up next."""
+
     if mode == "checklist":
+        # Homepage checklist: show every module from Year 1 up to and
+        # including the year the student just finished, so they can
+        # tick what they've passed.
         if last_year in ["0", "1", "2", "3", "4", "5"]:
             return {code: value for code, value in data.items() if code[2] <= last_year}
+
     elif mode == "results":
+        # Results page: show what becomes available NEXT, based on the
+        # year just finished. Year 3/4 overlap because Honours students
+        # can pick from both.
         if last_year == "0":
             return {code: value for code, value in data.items() if code[2] == "1"}
         elif last_year == "1":
@@ -33,7 +42,10 @@ def filter_by_last_year(data, last_year, mode):
         elif last_year == "4":
             return {code: value for code, value in data.items() if code[2] in ["4", "5"]}
         elif last_year == "5":
+            # "All" - no filtering.
             return data
+
+    # No last_year given at all - don't filter anything.
     return data
 
 
@@ -42,12 +54,20 @@ def get_module_status(code, details, passed_set, all_codes):
     pending (blocked only by a same-year module), or unclear (the
     prerequisite text couldn't be parsed). Returns (status, missing_list)."""
 
+    # Anti-requisites first: if the student has already passed something
+    # that conflicts with this module, it's blocked no matter what the
+    # prerequisites say.
     anti_req_string = details.get("anti_requisites", "None")
     if anti_req_string != "None":
         mentioned = find_codes_in_string(anti_req_string, all_codes)
-        if mentioned and evaluate_prereq(anti_req_string, passed_set, all_codes):
+        if not mentioned:
+            # The anti-requisite mentions a module we don't have data on
+            # (from another subject). Can't verify this.
+            return "unclear", []
+        if evaluate_prereq(anti_req_string, passed_set, all_codes):
             return "not_eligible", []
 
+    # No prerequisites at all - automatically eligible.
     prereq_string = details["prerequisites"]
     if prereq_string == "None":
         return "eligible", []
@@ -56,42 +76,64 @@ def get_module_status(code, details, passed_set, all_codes):
         if evaluate_prereq(prereq_string, passed_set, all_codes):
             return "eligible", []
 
+        # Not eligible yet. If the only thing missing
+        # is a module from the same year, the student would take it in
+        # Semester 1 of that year anyway - so it's not blocked,
+        # just "pending" until they finish Semester 1.
         missing = get_necessary_missing(prereq_string, passed_set, all_codes)
         if missing and all(c[2] == code[2] for c in missing):
             return "pending", missing
+
         return "not_eligible", []
+
     except Exception:
+        # The prerequisite text couldn't be parsed at all (e.g. it's a
+        # grade requirement or mentions a module outside our data).
         return "unclear", []
 
 
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request, semester: str = None, year: str = None, last_year: str = None):
     """Homepage: show the checklist of modules a student can tick as passed."""
+
     filtered = modules_data
+
     if semester:
         filtered = {code: details for code, details in filtered.items() if details["semester"] == semester}
     if year:
         filtered = {code: details for code, details in filtered.items() if code[2] == year}
+
+    # Narrow the checklist down based on the student's last completed year.
     filtered = filter_by_last_year(filtered, last_year, "checklist")
+
     return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year})
 
 
 @app.get("/check", response_class=HTMLResponse)
 async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None)):
     """Results page: work out eligibility for every module given what's been passed."""
+
     passed_set = set(passed)
 
+    # Special case: a brand new student hasn't passed anything yet, but
+    # Year 1 modules are all compulsory and guaranteed by the programme
+    # structure - so there's no real "eligibility" question here at all.
     if last_year == "0":
         results = {code: "eligible" for code, details in modules_data.items() if code[2] == "1"}
         return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": {}})
 
+    # Normal case: work out the status of every single module one at a time.
     results = {}
     pending_info = {}
     for code, details in modules_data.items():
         status, missing = get_module_status(code, details, passed_set, all_codes)
         results[code] = status
         if missing:
+            # Remember which specific module is blocking a "pending" result,
+            # so we can tell the user exactly what to complete first.
             pending_info[code] = missing
 
+    # Only show the modules relevant to what's coming next.
     results = filter_by_last_year(results, last_year, "results")
+
     return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": pending_info})
