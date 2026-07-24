@@ -5,6 +5,17 @@
     <link rel="stylesheet" type="text/css" href="/static/style.css">
 </head>
 <body>
+    <form method="get" action="/check">
+        <input type="hidden" name="last_year" value="{{ last_year }}">
+        {% for code in passed %}
+            <input type="hidden" name="passed" value="{{code}}">
+        {% endfor %}
+        <label><input type="radio" name="exam_percent" value=""> Any assessment type</label>
+        <label><input type="radio" name="exam_percent" value="0"> 100% coursework</label>
+        <label><input type="radio" name="exam_percent" value="60"> 60% exam / 40% coursework</label>
+        <label><input type="radio" name="exam_percent" value="80"> 80% exam / 20% coursework</label>
+        <button type="submit">Update filter</button>
+    </form>
     <h1>Eligibility Check Results</h1>
     <table border="1">
         <thead>

@@ -18,6 +18,10 @@
         <ul>
             <form method="get" action="/check">
                 <input type="hidden" name="last_year" value="{{ last_year }}">
+                <label><input type="radio" name="exam_percent" value=""> Any assessment type</label>
+                <label><input type="radio" name="exam_percent" value="0"> 100% coursework</label>
+                <label><input type="radio" name="exam_percent" value="60"> 60% exam / 40% coursework</label>
+                <label><input type="radio" name="exam_percent" value="80"> 80% exam / 20% coursework</label>
                 {% for code, details in modules.items() %}
                     <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}<br>
                 {% endfor %}        
