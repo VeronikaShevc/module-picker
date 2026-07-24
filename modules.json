@@ -3,6 +3,9 @@
     "name": "Object-Oriented Programming",
     "credits": "20",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST HAVE MATHEMATICS (EITHER HIGHER OR A-LEVEL AT GRADE A OR BETTER),THIS MODULE HAS AVAILABILITY RESTRICTIONS INDICATED IN THE MODULE CATALOGUE. YOU SHOULD ENSURE YOU UNDERSTAND THE AVAILABILITY RESTRICTIONS BEFORE SELECTING THIS MODULE.",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101"
@@ -11,6 +14,9 @@
     "name": "Programming with Data",
     "credits": "20",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101"
@@ -19,6 +25,9 @@
     "name": "Programming Projects",
     "credits": "20",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002",
     "semester": "2",
     "anti_requisites": "None"
@@ -27,6 +36,9 @@
     "name": "Computer Systems Fundamentals",
     "credits": "20",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "None"
@@ -35,6 +47,9 @@
     "name": "Foundations of Computation",
     "credits": "30",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002 AND PASS CS1003",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101"
@@ -43,6 +58,9 @@
     "name": "Computer Systems",
     "credits": "30",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2001 OR PASS CS2101",
     "semester": "2",
     "anti_requisites": "None"
@@ -51,6 +69,9 @@
     "name": "The Internet and the Web: Concepts and Programming",
     "credits": "30",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "None"
@@ -59,6 +80,9 @@
     "name": "Advanced Programming Projects",
     "credits": "30",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2001 OR PASS CS2101",
     "semester": "2",
     "anti_requisites": "None"
@@ -67,6 +91,9 @@
     "name": "Foundations of Computation (Accelerated)",
     "credits": "40",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS1002 OR TAKE CS1003 OR TAKE CS2001"
@@ -75,6 +102,9 @@
     "name": "Logic and Reasoning",
     "credits": "15",
     "assessment": "3-Hour written examination - 80%, Coursework - 20%",
+    "exam_duration": 3.0,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE PY4612"
@@ -83,6 +113,9 @@
     "name": "Computational Complexity",
     "credits": "15",
     "assessment": "3-Hour written examination - 80%, Coursework - 20%",
+    "exam_duration": 3.0,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND PASS CS3050 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE MT3852"
@@ -91,6 +124,9 @@
     "name": "Software Engineering Team Project",
     "credits": "30",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE VP3135"
@@ -99,6 +135,9 @@
     "name": "Databases",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "2",
     "anti_requisites": "None"
@@ -107,6 +146,9 @@
     "name": "Data Communications and Networks",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2101 OR PASS CS2001) AND (TAKE CS2003 OR AUDIT CS2003 AND DEMONSTRATE ENGAGING WITH RELEVANT CS2003 MATERIAL TO THE SATISFACTION OF HONOURS ADVISER)",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5020"
@@ -115,6 +157,9 @@
     "name": "Operating Systems",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
     "anti_requisites": "None"
@@ -123,6 +168,9 @@
     "name": "Artificial Intelligence",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5010"
@@ -131,6 +179,9 @@
     "name": "Human Computer Interaction",
     "credits": "15",
     "assessment": "3-Hour written examination - 80%, Coursework - 20%",
+    "exam_duration": 3.0,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5040"
@@ -139,6 +190,9 @@
     "name": "Data Encoding",
     "credits": "15",
     "assessment": "3-Hour written examination - 80%, Coursework - 20%",
+    "exam_duration": 3.0,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
     "anti_requisites": "None"
@@ -147,6 +201,9 @@
     "name": "Logic and Software Verification",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3052",
     "semester": "2",
     "anti_requisites": "None"
@@ -155,6 +212,9 @@
     "name": "Minor Software Project",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135",
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4099 OR TAKE CS4796 OR TAKE CS5199"
@@ -163,6 +223,9 @@
     "name": "Major Software Project",
     "credits": "30",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135",
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4796 OR TAKE CS5199"
@@ -171,6 +234,9 @@
     "name": "Computer Graphics",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "1",
     "anti_requisites": "None"
@@ -179,6 +245,9 @@
     "name": "Distributed Systems",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3102",
     "semester": "2",
     "anti_requisites": "None"
@@ -187,6 +256,9 @@
     "name": "Advanced Communication Networks and Systems",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3102",
     "semester": "1",
     "anti_requisites": "None"
@@ -195,6 +267,9 @@
     "name": "Programming Language Design and Implementation",
     "credits": "15",
     "assessment": "3-Hour written examination - 80%, Coursework - 20%",
+    "exam_duration": 3.0,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "1",
     "anti_requisites": "None"
@@ -203,6 +278,9 @@
     "name": "Computer Architecture",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3104",
     "semester": "2",
     "anti_requisites": "None"
@@ -211,6 +289,9 @@
     "name": "Computer Security",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "2",
     "anti_requisites": "None"
@@ -219,6 +300,9 @@
     "name": "Concurrency and Multi-Core Architectures",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3052 AND PASS CS3104",
     "semester": "2",
     "anti_requisites": "None"
@@ -227,6 +311,9 @@
     "name": "Signal Processing: Sound, Image, Video",
     "credits": "15",
     "assessment": "2.5-hour written examination - 60%, coursework - 40%.",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "None"
@@ -235,6 +322,9 @@
     "name": "Video Games",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "2",
     "anti_requisites": "None"
@@ -243,6 +333,9 @@
     "name": "Constraint Programming",
     "credits": "15",
     "assessment": "3-Hour written examination - 80%, Coursework - 20%",
+    "exam_duration": 3.0,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "1",
     "anti_requisites": "None"
@@ -251,6 +344,9 @@
     "name": "Joint Project (30cr)",
     "credits": "30",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135,THE STUDENT REQUIRES A LETTER OF AGREEMENT",
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS5199"
@@ -259,6 +355,9 @@
     "name": "Object-Oriented Modelling, Design and Programming",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5002"
@@ -267,6 +366,9 @@
     "name": "Programming Principles and Practice",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5001"
@@ -275,6 +377,9 @@
     "name": "Masters Programming Projects",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST TAKE CS5002",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE IS5108"
@@ -283,6 +388,9 @@
     "name": "Language and Computation",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3052",
     "semester": "2",
     "anti_requisites": "None"
@@ -291,6 +399,9 @@
     "name": "Machine Learning",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "PGT: BEFORE TAKING THIS MODULE YOU MUST HAVE ACHIEVED A GRADE OF B OR HIGHER IN HIGHER OR A-LEVEL MATHS",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE ID5059"
@@ -299,6 +410,9 @@
     "name": "Symbolic Artificial Intelligence",
     "credits": "15",
     "assessment": "Coursework - 20%, Exam - 80%",
+    "exam_duration": null,
+    "exam_percent": 80,
+    "coursework_percent": 20,
     "prerequisites": "UG: BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (CS2001 OR CS2101)",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3050 OR TAKE CS3105"
@@ -307,6 +421,9 @@
     "name": "Uncertainty in Artificial Intelligence",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "2",
     "anti_requisites": "None"
@@ -315,6 +432,9 @@
     "name": "Principles of Computer Communication Systems",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3102"
@@ -323,6 +443,9 @@
     "name": "Fundamentals of Software Engineering",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND PASS CS2001 OR PASS CS2101",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3099"
@@ -331,6 +454,9 @@
     "name": "Critical Systems Engineering",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS3099",
     "semester": "1",
     "anti_requisites": "None"
@@ -339,6 +465,9 @@
     "name": "Software Architecture and Design",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099,BEFORE TAKING THIS MODULE YOU MUST PASS CS5030",
     "semester": "2",
     "anti_requisites": "None"
@@ -347,6 +476,9 @@
     "name": "Software Product and Project Management",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099",
     "semester": "1",
     "anti_requisites": "None"
@@ -355,6 +487,9 @@
     "name": "Software Quality",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099,BEFORE TAKING THIS MODULE YOU MUST PASS CS5030",
     "semester": "2",
     "anti_requisites": "None"
@@ -363,6 +498,9 @@
     "name": "Human Computer Interaction Principles and Methods",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3106"
@@ -371,6 +509,9 @@
     "name": "Interactive Software and Hardware",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "2",
     "anti_requisites": "None"
@@ -379,6 +520,9 @@
     "name": "User-Centred Interaction Design",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "UNDERGRADUATE STUDENTS - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "1",
     "anti_requisites": "None"
@@ -387,6 +531,9 @@
     "name": "Information Visualisation",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101). PGT: CS5001 OR CS5002",
     "semester": "2",
     "anti_requisites": "None"
@@ -395,6 +542,9 @@
     "name": "Data-Intensive Systems",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE STUDENTS MUST HAVE PASSED CS2002 AND (CS2001 OR CS2101). POSTGRADUATE STUDENTS MUST PASS CS5001 BEFORE TAKING THIS MODULE",
     "semester": "2",
     "anti_requisites": "None"
@@ -403,6 +553,9 @@
     "name": "Data Ethics and Privacy",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "2",
     "anti_requisites": "None"
@@ -411,6 +564,9 @@
     "name": "Web Technologies",
     "credits": "15",
     "assessment": "2.5-hour Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.5,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "UG: YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2003"
@@ -419,6 +575,9 @@
     "name": "Individual Masters Project",
     "credits": "60",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135",
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS4796"
@@ -427,6 +586,9 @@
     "name": "Special Project for Research Engineers",
     "credits": "15",
     "assessment": "Coursework = 100%",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "2",
     "anti_requisites": "None"
@@ -435,6 +597,9 @@
     "name": "Machine Learning for Data Analysis",
     "credits": "15",
     "assessment": "2-hour Written Examination = 60%, Coursework = 40%",
+    "exam_duration": 2.0,
+    "exam_percent": 60,
+    "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5014"
@@ -443,6 +608,9 @@
     "name": "Information Technology 1",
     "credits": "20",
     "assessment": "Coursework = 100% (including class tests)",
+    "exam_duration": null,
+    "exam_percent": 0,
+    "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
     "anti_requisites": "None"
