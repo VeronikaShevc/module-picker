@@ -93,21 +93,18 @@ def get_module_status(code, details, passed_set, all_codes):
 
 
 @app.get("/", response_class=HTMLResponse)
-async def read_item(request: Request, semester: str = None, year: str = None, last_year: str = None):
+async def read_item(request: Request, last_year: str = None, exam_percent: int = None):
     """Homepage: show the checklist of modules a student can tick as passed."""
 
     filtered = modules_data
 
-    if semester:
-        filtered = {code: details for code, details in filtered.items() if details["semester"] == semester}
-    if year:
-        filtered = {code: details for code, details in filtered.items() if code[2] == year}
+    if exam_percent is not None:
+        filtered = {code: details for code, details in filtered.items() if details["exam_percent"] == exam_percent}
 
     # Narrow the checklist down based on the student's last completed year.
     filtered = filter_by_last_year(filtered, last_year, "checklist")
 
     return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year})
-
 
 @app.get("/check", response_class=HTMLResponse)
 async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None)):
