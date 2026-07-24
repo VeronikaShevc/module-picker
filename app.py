@@ -93,7 +93,7 @@ def get_module_status(code, details, passed_set, all_codes):
 
 
 @app.get("/", response_class=HTMLResponse)
-async def read_item(request: Request, last_year: str = None, exam_percent: int = None, coursework_percent: int = None):
+async def read_item(request: Request, last_year: str = None, exam_percent: int = None, coursework_percent: int = None, exam_duration: float = None):
     """Homepage: show the checklist of modules a student can tick as passed."""
 
     filtered = modules_data
@@ -102,6 +102,8 @@ async def read_item(request: Request, last_year: str = None, exam_percent: int =
         filtered = {code: details for code, details in filtered.items() if details["exam_percent"] == exam_percent}
     if coursework_percent is not None:
         filtered = {code: details for code, details in filtered.items() if details["coursework_percent"] == coursework_percent}
+    if exam_duration is not None:
+        filtered = {code: details for code, details in filtered.items() if details["exam_duration"] == exam_duration}
 
     filtered = filter_by_last_year(filtered, last_year, "checklist")
 
@@ -109,7 +111,7 @@ async def read_item(request: Request, last_year: str = None, exam_percent: int =
 
 
 @app.get("/check", response_class=HTMLResponse)
-async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None), exam_percent: int = None, coursework_percent: int = None):
+async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None), exam_percent: int = None, coursework_percent: int = None, exam_duration: float = None):
     """Results page: work out eligibility for every module given what's been passed."""
 
     passed_set = set(passed)
@@ -139,5 +141,7 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
         results = {code: status for code, status in results.items() if modules_data[code]["exam_percent"] == exam_percent}
     if coursework_percent is not None:
         results = {code: status for code, status in results.items() if modules_data[code]["coursework_percent"] == coursework_percent}
+    if exam_duration is not None:
+        results = {code: status for code, status in results.items() if modules_data[code]["exam_duration"] == exam_duration}
 
     return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": pending_info})
