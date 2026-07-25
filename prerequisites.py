@@ -46,8 +46,9 @@ def clean_prereq_string(text, all_codes):
     words = text.replace("(", " ( ").replace(")", " ) ").split()
     keep = []
     for word in words:
-        if word in all_codes or word in ["AND", "OR", "(", ")"]:
-            keep.append(word)
+        cleaned_word = word.strip(".,")
+        if cleaned_word in all_codes or word in ["AND", "OR", "(", ")"]:
+            keep.append(cleaned_word if cleaned_word in all_codes else word)
     return " ".join(keep)
 
 def get_necessary_missing(text, passed_modules, all_codes):
