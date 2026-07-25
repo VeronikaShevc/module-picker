@@ -39,10 +39,10 @@ def substitute_booleans(text, passed_modules, all_codes):
             text = text.replace(code, "False")
     return text
 
-
 def clean_prereq_string(text, all_codes):
     """Strip out filler English words, 
     keeping only module codes, AND, OR, and brackets."""
+    text = text.replace(",", " AND ")
     words = text.replace("(", " ( ").replace(")", " ) ").split()
     keep = []
     for word in words:
