@@ -87,3 +87,22 @@ def test_no_missing_when_everything_passed():
     all_codes = ["CS2002", "CS3050"]
     missing = get_necessary_missing(prereq, passed, all_codes)
     assert missing == []
+
+def test_cs5052_postgraduate_wording_real_data():
+    prereq = "UNDERGRADUATE STUDENTS MUST HAVE PASSED CS2002 AND (CS2001 OR CS2101). POSTGRADUATE STUDENTS MUST PASS CS5001 BEFORE TAKING THIS MODULE"
+    passed = {"CS2002", "CS2001"}
+    all_codes = ["CS2002", "CS2001", "CS2101", "CS5001"]
+    assert evaluate_prereq(prereq, passed, all_codes) == True
+
+def test_cs3102_take_or_audit_clause():
+    prereq = "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2101 OR PASS CS2001) AND (TAKE CS2003 OR AUDIT CS2003 AND DEMONSTRATE ENGAGING WITH RELEVANT CS2003 MATERIAL TO THE SATISFACTION OF HONOURS ADVISER)"
+    passed = {"CS2002", "CS2001", "CS2003"}
+    all_codes = ["CS2002", "CS2001", "CS2101", "CS2003"]
+    assert evaluate_prereq(prereq, passed, all_codes) == True
+
+
+def test_cs3102_fails_correctly_without_cs2003():
+    prereq = "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2101 OR PASS CS2001) AND (TAKE CS2003 OR AUDIT CS2003 AND DEMONSTRATE ENGAGING WITH RELEVANT CS2003 MATERIAL TO THE SATISFACTION OF HONOURS ADVISER)"
+    passed = {"CS2002", "CS2001"}
+    all_codes = ["CS2002", "CS2001", "CS2101", "CS2003"]
+    assert evaluate_prereq(prereq, passed, all_codes) == False
