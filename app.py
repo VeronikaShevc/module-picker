@@ -110,8 +110,7 @@ async def read_item(request: Request, last_year: str = None, exam_percent: str =
 
     filtered = filter_by_last_year(filtered, last_year, "checklist")
 
-    return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year})
-
+    return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year, "exam_percent": exam_percent, "exam_duration": exam_duration})
 
 @app.get("/check", response_class=HTMLResponse)
 async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None), exam_percent: str = None, coursework_percent: str = None, exam_duration: str = None):
