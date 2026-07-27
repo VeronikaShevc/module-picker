@@ -42,6 +42,8 @@
                         Unclear
                     {% elif status=="pending" %}
                         Pending: complete {{ pending_info[code] | join(", ") }} first
+                    {% elif status=="already_passed" %}
+                        Already Passed
                     {% else %}
                         Unknown
                     {% endif %}

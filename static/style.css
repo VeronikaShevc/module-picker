@@ -86,3 +86,7 @@ select {
     display: block;
     width: 300px;
 }
+
+.status-already_passed {
+    background-color: #d3d3d3;
+}

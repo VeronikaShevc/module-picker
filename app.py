@@ -133,6 +133,9 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
     results = {}
     pending_info = {}
     for code, details in modules_data.items():
+        if code in passed_set:
+            results[code] = "already_passed"
+            continue
         status, missing = get_module_status(code, details, passed_set, all_codes)
         results[code] = status
         if missing:
