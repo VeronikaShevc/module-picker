@@ -10,7 +10,8 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101",
     "scqf_level": "SCQF level 7",
-    "week_con_hours": "2 lectures, 2 exercise classes, 1 tutorial and 1 x 3-hour practical support session."
+    "week_con_hours": "2 lectures, 2 exercise classes, 1 tutorial and 1 x 3-hour practical support session.",
+    "weekly_contact_parsed": null
   },
   "CS1003": {
     "name": "Programming with Data",
@@ -23,7 +24,8 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101",
     "scqf_level": "SCQF level 7",
-    "week_con_hours": "2 lectures, 2 exercise classes, 1 tutorial and 1 x 3-hour practical support session."
+    "week_con_hours": "2 lectures, 2 exercise classes, 1 tutorial and 1 x 3-hour practical support session.",
+    "weekly_contact_parsed": null
   },
   "CS1006": {
     "name": "Programming Projects",
@@ -36,7 +38,12 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 7",
-    "week_con_hours": "1h x 5 weeks lectures, 1hr x 6 weeks tutorials, 2hr x 11 weeks practical support sessions"
+    "week_con_hours": "1h x 5 weeks lectures, 1hr x 6 weeks tutorials, 2hr x 11 weeks practical support sessions",
+    "weekly_contact_parsed": [
+      "Lectures: 5 hours total",
+      "Tutorials: 6 hours total",
+      "Practical support sessions: 22 hours total"
+    ]
   },
   "CS1007": {
     "name": "Computer Systems Fundamentals",
@@ -49,7 +56,8 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 7",
-    "week_con_hours": "2 lectures, 2 exercise classes, 1 tutorial and 1 x 3-hour practical support session."
+    "week_con_hours": "2 lectures, 2 exercise classes, 1 tutorial and 1 x 3-hour practical support session.",
+    "weekly_contact_parsed": null
   },
   "CS2001": {
     "name": "Foundations of Computation",
@@ -62,7 +70,12 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101",
     "scqf_level": "SCQF level 8",
-    "week_con_hours": "2hr x 10 weeks lectures, 2hr x 10 weeks discussion, 1hr x 9 weeks tutorial, 3hr x 9 practical support session."
+    "week_con_hours": "2hr x 10 weeks lectures, 2hr x 10 weeks discussion, 1hr x 9 weeks tutorial, 3hr x 9 practical support session.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Discussion: 20 hours total",
+      "Tutorial: 9 hours total"
+    ]
   },
   "CS2002": {
     "name": "Computer Systems",
@@ -75,7 +88,12 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 8",
-    "week_con_hours": "2hr x 11 weeks lectures, 2hr x 11 weeks discussion, 1hr x 10 weeks tutorial, , 3hr x 10 practical support session."
+    "week_con_hours": "2hr x 11 weeks lectures, 2hr x 11 weeks discussion, 1hr x 10 weeks tutorial, 3hr x 10 practical support session.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Discussion: 22 hours total",
+      "Tutorial: 10 hours total"
+    ]
   },
   "CS2003": {
     "name": "The Internet and the Web: Concepts and Programming",
@@ -88,7 +106,14 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 8",
-    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 10 weeks discussion, 1hr x 10 weeks exercise class, 1hr x 9 weeks tutorial, 3hr x 9 weeks practical support session."
+    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 10 weeks discussion, 1hr x 10 weeks exercise class, 1hr x 9 weeks tutorial, 3hr x 9 weeks practical support session.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Discussion: 10 hours total",
+      "Exercise class: 10 hours total",
+      "Tutorial: 9 hours total",
+      "Practical support session: 27 hours total"
+    ]
   },
   "CS2006": {
     "name": "Advanced Programming Projects",
@@ -101,7 +126,12 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 8",
-    "week_con_hours": "4hr x 10 weeks lectures, 1hr x 9 weeks tutorial, 3hr x 9 weeks practical support session"
+    "week_con_hours": "4hr x 10 weeks lectures, 1hr x 9 weeks tutorial, 3hr x 9 weeks practical support session",
+    "weekly_contact_parsed": [
+      "Lectures: 40 hours total",
+      "Tutorial: 9 hours total",
+      "Practical support session: 27 hours total"
+    ]
   },
   "CS2101": {
     "name": "Foundations of Computation (Accelerated)",
@@ -114,7 +144,13 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS1002 OR TAKE CS1003 OR TAKE CS2001",
     "scqf_level": "SCQF level 8",
-    "week_con_hours": "2hr x 10 weeks lectures, 2hr x 10 weeks discussion, 3 x 1hr x 9 weeks tutorial, 3hr x 9 weeks practical support session."
+    "week_con_hours": "2hr x 10 weeks lectures, 2hr x 10 weeks discussion, 3 x 1hr x 9 weeks tutorial, 3hr x 9 weeks practical support session.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Discussion: 20 hours total",
+      "Tutorial: 9 hours total",
+      "Practical support session: 27 hours total"
+    ]
   },
   "CS3050": {
     "name": "Logic and Reasoning",
@@ -127,7 +163,11 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE PY4612",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS3052": {
     "name": "Computational Complexity",
@@ -140,7 +180,8 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE MT3852",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 lectures (x 11 weeks) and fortnightly tutorial."
+    "week_con_hours": "2 lectures (x 11 weeks) and fortnightly tutorial.",
+    "weekly_contact_parsed": null
   },
   "CS3099": {
     "name": "Software Engineering Team Project",
@@ -153,7 +194,8 @@
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE VP3135",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "1 lecture (x 10 weeks) and 4 seminars"
+    "week_con_hours": "1 lecture (x 10 weeks) and 4 seminars",
+    "weekly_contact_parsed": null
   },
   "CS3101": {
     "name": "Databases",
@@ -166,7 +208,8 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 lectures (x 11 weeks) and fortnightly tutorial."
+    "week_con_hours": "2 lectures (x 11 weeks) and fortnightly tutorial.",
+    "weekly_contact_parsed": null
   },
   "CS3102": {
     "name": "Data Communications and Networks",
@@ -179,7 +222,10 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5020",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2.5 hr x 11 weeks lectures/discussion."
+    "week_con_hours": "2.5 hr x 11 weeks lectures/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures/discussion: 28 hours total"
+    ]
   },
   "CS3104": {
     "name": "Operating Systems",
@@ -192,7 +238,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS3105": {
     "name": "Artificial Intelligence",
@@ -205,7 +255,11 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5010",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS3106": {
     "name": "Human Computer Interaction",
@@ -218,7 +272,11 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5040",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion: 6 hours total"
+    ]
   },
   "CS3302": {
     "name": "Data Encoding",
@@ -231,7 +289,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 9",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS4052": {
     "name": "Logic and Software Verification",
@@ -244,7 +306,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS4098": {
     "name": "Minor Software Project",
@@ -257,7 +323,8 @@
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4099 OR TAKE CS4796 OR TAKE CS5199",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "Individual supervision"
+    "week_con_hours": "Individual supervision",
+    "weekly_contact_parsed": null
   },
   "CS4099": {
     "name": "Major Software Project",
@@ -270,7 +337,8 @@
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4796 OR TAKE CS5199",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "Individual supervision."
+    "week_con_hours": "Individual supervision.",
+    "weekly_contact_parsed": null
   },
   "CS4102": {
     "name": "Computer Graphics",
@@ -283,7 +351,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks practical class/discussion/tutorial."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks practical class/discussion/tutorial.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Practical class/discussion/tutorial: 6 hours total"
+    ]
   },
   "CS4103": {
     "name": "Distributed Systems",
@@ -296,7 +368,8 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 lectures (x 11 weeks) and fortnightly tutorial."
+    "week_con_hours": "2 lectures (x 11 weeks) and fortnightly tutorial.",
+    "weekly_contact_parsed": null
   },
   "CS4105": {
     "name": "Advanced Communication Networks and Systems",
@@ -309,7 +382,10 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2.5 hr x 10 weeks lectures/discussion."
+    "week_con_hours": "2.5 hr x 10 weeks lectures/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures/discussion: 25 hours total"
+    ]
   },
   "CS4201": {
     "name": "Programming Language Design and Implementation",
@@ -322,7 +398,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS4202": {
     "name": "Computer Architecture",
@@ -335,7 +415,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion: 6 hours total"
+    ]
   },
   "CS4203": {
     "name": "Computer Security",
@@ -348,7 +432,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS4204": {
     "name": "Concurrency and Multi-Core Architectures",
@@ -361,7 +449,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion: 6 hours total"
+    ]
   },
   "CS4302": {
     "name": "Signal Processing: Sound, Image, Video",
@@ -374,7 +466,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks exercise/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks exercise/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Exercise/discussion: 5 hours total"
+    ]
   },
   "CS4303": {
     "name": "Video Games",
@@ -387,7 +483,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion: 6 hours total"
+    ]
   },
   "CS4402": {
     "name": "Constraint Programming",
@@ -400,7 +500,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS4796": {
     "name": "Joint Project (30cr)",
@@ -413,7 +517,8 @@
     "semester": "Whole Year",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS5199",
     "scqf_level": "SCQF level 10",
-    "week_con_hours": "As per Letter of Agreement."
+    "week_con_hours": "As per Letter of Agreement.",
+    "weekly_contact_parsed": null
   },
   "CS5001": {
     "name": "Object-Oriented Modelling, Design and Programming",
@@ -426,7 +531,10 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5002",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 10 weeks lectures/discussion/practical class."
+    "week_con_hours": "2.5 hr x 10 weeks lectures/discussion/practical class.",
+    "weekly_contact_parsed": [
+      "Lectures/discussion/practical class: 25 hours total"
+    ]
   },
   "CS5002": {
     "name": "Programming Principles and Practice",
@@ -439,7 +547,10 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5001",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 10 weeks lectures/discussion/practical class."
+    "week_con_hours": "2.5 hr x 10 weeks lectures/discussion/practical class.",
+    "weekly_contact_parsed": [
+      "Lectures/discussion/practical class: 25 hours total"
+    ]
   },
   "CS5003": {
     "name": "Masters Programming Projects",
@@ -452,7 +563,10 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE IS5108",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 11 weeks lectures/seminar/tutorial/practical class."
+    "week_con_hours": "2.5 hr x 11 weeks lectures/seminar/tutorial/practical class.",
+    "weekly_contact_parsed": [
+      "Lectures/seminar/tutorial/practical class: 28 hours total"
+    ]
   },
   "CS5012": {
     "name": "Language and Computation",
@@ -465,7 +579,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/practical class."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/practical class.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/practical class: 6 hours total"
+    ]
   },
   "CS5014": {
     "name": "Machine Learning",
@@ -478,7 +596,11 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE ID5059",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/practical class."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/practical class.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/practical class: 6 hours total"
+    ]
   },
   "CS5015": {
     "name": "Symbolic Artificial Intelligence",
@@ -491,7 +613,11 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3050 OR TAKE CS3105",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 5 weeks tutorial/discussion"
+    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 5 weeks tutorial/discussion",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5016": {
     "name": "Uncertainty in Artificial Intelligence",
@@ -504,7 +630,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2hr x 11 weeks lectures, 1hr x 5 weeks tutorial/discussion"
+    "week_con_hours": "2hr x 11 weeks lectures, 1hr x 5 weeks tutorial/discussion",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5020": {
     "name": "Principles of Computer Communication Systems",
@@ -517,7 +647,11 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3102",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5030": {
     "name": "Fundamentals of Software Engineering",
@@ -530,7 +664,11 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3099",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5032": {
     "name": "Critical Systems Engineering",
@@ -543,7 +681,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5033": {
     "name": "Software Architecture and Design",
@@ -556,7 +698,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion class."
+    "week_con_hours": "2 hr x 11 weeks lectures, 1 hr x 6 weeks tutorial/discussion class.",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion class: 6 hours total"
+    ]
   },
   "CS5034": {
     "name": "Software Product and Project Management",
@@ -569,7 +715,11 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 5 weeks tutorial/discussion"
+    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 5 weeks tutorial/discussion",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5035": {
     "name": "Software Quality",
@@ -582,7 +732,11 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2hr x 11 weeks lectures, 1hr x 5 weeks tutorial/discussion"
+    "week_con_hours": "2hr x 11 weeks lectures, 1hr x 5 weeks tutorial/discussion",
+    "weekly_contact_parsed": [
+      "Lectures: 22 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5040": {
     "name": "Human Computer Interaction Principles and Methods",
@@ -595,7 +749,11 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3106",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion."
+    "week_con_hours": "2 hr x 10 weeks lectures, 1 hr x 5 weeks tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5041": {
     "name": "Interactive Software and Hardware",
@@ -608,7 +766,10 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 11 weeks lectures/seminar/tutorial/practical class."
+    "week_con_hours": "2.5 hr x 11 weeks lectures/seminar/tutorial/practical class.",
+    "weekly_contact_parsed": [
+      "Lectures/seminar/tutorial/practical class: 28 hours total"
+    ]
   },
   "CS5042": {
     "name": "User-Centred Interaction Design",
@@ -621,7 +782,10 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 10 weeks classes."
+    "week_con_hours": "2.5 hr x 10 weeks classes.",
+    "weekly_contact_parsed": [
+      "Classes: 25 hours total"
+    ]
   },
   "CS5044": {
     "name": "Information Visualisation",
@@ -634,7 +798,10 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 11 weeks lectures/tutorial/discussion."
+    "week_con_hours": "2.5 hr x 11 weeks lectures/tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures/tutorial/discussion: 28 hours total"
+    ]
   },
   "CS5052": {
     "name": "Data-Intensive Systems",
@@ -647,7 +814,10 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2.5 hr x 11 weeks lectures/seminar/tutorial/discussion."
+    "week_con_hours": "2.5 hr x 11 weeks lectures/seminar/tutorial/discussion.",
+    "weekly_contact_parsed": [
+      "Lectures/seminar/tutorial/discussion: 28 hours total"
+    ]
   },
   "CS5055": {
     "name": "Data Ethics and Privacy",
@@ -660,7 +830,8 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "Weekly seminars (x11 weeks), practical classes (x2 weeks)"
+    "week_con_hours": "Weekly seminars (x11 weeks), practical classes (x2 weeks)",
+    "weekly_contact_parsed": null
   },
   "CS5063": {
     "name": "Web Technologies",
@@ -673,7 +844,11 @@
     "semester": "1",
     "anti_requisites": "UG: YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2003",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 5 weeks tutorial/discussion"
+    "week_con_hours": "2hr x 10 weeks lectures, 1hr x 5 weeks tutorial/discussion",
+    "weekly_contact_parsed": [
+      "Lectures: 20 hours total",
+      "Tutorial/discussion: 5 hours total"
+    ]
   },
   "CS5199": {
     "name": "Individual Masters Project",
@@ -686,7 +861,8 @@
     "semester": "1",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS4796",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "Individual supervision."
+    "week_con_hours": "Individual supervision.",
+    "weekly_contact_parsed": null
   },
   "CS5201": {
     "name": "Special Project for Research Engineers",
@@ -699,7 +875,8 @@
     "semester": "2",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "2 supervision hours (x 15 weeks)"
+    "week_con_hours": "2 supervision hours (x 15 weeks)",
+    "weekly_contact_parsed": null
   },
   "ID5059": {
     "name": "Machine Learning for Data Analysis",
@@ -712,7 +889,8 @@
     "semester": "2",
     "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5014",
     "scqf_level": "SCQF level 11",
-    "week_con_hours": "Lectures, seminars, tutorials and practical classes."
+    "week_con_hours": "Lectures, seminars, tutorials and practical classes.",
+    "weekly_contact_parsed": null
   },
   "IS1901": {
     "name": "Information Technology 1",
@@ -725,6 +903,7 @@
     "semester": "1",
     "anti_requisites": "None",
     "scqf_level": "SCQF level 7",
-    "week_con_hours": "1 x 3-hour session: lectures, tutorials, seminars, presentations and supervised practicals, home study, essays and practical work."
+    "week_con_hours": "1 x 3-hour session: lectures, tutorials, seminars, presentations and supervised practicals, home study, essays and practical work.",
+    "weekly_contact_parsed": null
   }
 }

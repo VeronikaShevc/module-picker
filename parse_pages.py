@@ -4,6 +4,24 @@ import re
 from bs4 import BeautifulSoup
 all_modules = {}
 
+
+def parse_weekly_contact(text):
+    """TBreak weekly contact hours into activity: total hours.
+    Returns None if the text doesn't match the expected pattern."""
+    pattern = re.findall(r'(\d+\.?\d*)\s*h(?:r|our)?s?\s*x\s*(\d+)\s*weeks?\s+([a-zA-Z/\s]+)', text, re.IGNORECASE)
+    
+    if not pattern:
+        return None
+    
+    results = []
+    for hours, weeks, activity in pattern:
+        total = float(hours) * int(weeks)
+        activity = activity.strip().rstrip('.').strip()
+        results.append(f"{activity.capitalize()}: {total:.0f} hours total")
+    
+    return results
+
+
 def parse_assessment(text):
     """Extract exam duration (hours), exam percent, and coursework
     percent from a raw assessment string. Handles decimals in duration
@@ -42,7 +60,9 @@ for filename in os.listdir("pages"):
     scqf_level = soup.find("h3", string="SCQF level").find_next("p").text.strip()
 
     week_con_hours = soup.find("h3", string="Weekly contact").find_next("p").text.strip()
-    print(week_con_hours)
+    week_con_hours = week_con_hours.replace(", ,", ",").strip()
+
+    parsed_contact = parse_weekly_contact(week_con_hours)
     # print(code, "-", name, "-", credits, "-", assessment, "-", prerequisites, "-", semester)
 
 
@@ -57,7 +77,8 @@ for filename in os.listdir("pages"):
         "semester": semester,
         "anti_requisites": anti_requisites,
         "scqf_level": scqf_level,
-        "week_con_hours": week_con_hours
+        "week_con_hours": week_con_hours,
+        "weekly_contact_parsed": parsed_contact,
     }
 
 with open("modules.json", "w") as f:
