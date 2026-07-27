@@ -25,6 +25,7 @@
                 <th>Status</th>
                 <th>SCQF Level</th>
                 <th>Prerequisites</th>
+                <th>Weekly Contact</th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +48,15 @@
                 </td>
                 <td>{{modules[code].scqf_level}}</td>
                 <td>{{modules[code].prerequisites}}</td>
+                <td>
+                    {% if modules[code].weekly_contact_parsed %}
+                        {% for item in modules[code].weekly_contact_parsed %}
+                            {{ item }}<br>
+                        {% endfor %}
+                    {% else %}
+                        <em>{{ modules[code].week_con_hours }}</em>
+                    {% endif %}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
