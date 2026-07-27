@@ -39,6 +39,8 @@ for filename in os.listdir("pages"):
     assessment = soup.find("h2", id="assessment").find_next("p").text.strip()
     exam_duration, exam_percent, coursework_percent = parse_assessment(assessment)
 
+    scqf_level = soup.find("h3", string="SCQF level").find_next("p").text.strip()
+    print(scqf_level)
     # print(code, "-", name, "-", credits, "-", assessment, "-", prerequisites, "-", semester)
 
 
@@ -51,7 +53,8 @@ for filename in os.listdir("pages"):
         "coursework_percent": coursework_percent,
         "prerequisites": prerequisites,
         "semester": semester,
-        "anti_requisites": anti_requisites
+        "anti_requisites": anti_requisites,
+        "scqf_level": scqf_level
     }
 
 with open("modules.json", "w") as f:

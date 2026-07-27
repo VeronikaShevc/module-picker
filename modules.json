@@ -8,7 +8,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST HAVE MATHEMATICS (EITHER HIGHER OR A-LEVEL AT GRADE A OR BETTER),THIS MODULE HAS AVAILABILITY RESTRICTIONS INDICATED IN THE MODULE CATALOGUE. YOU SHOULD ENSURE YOU UNDERSTAND THE AVAILABILITY RESTRICTIONS BEFORE SELECTING THIS MODULE.",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101",
+    "scqf_level": "SCQF level 7"
   },
   "CS1003": {
     "name": "Programming with Data",
@@ -19,7 +20,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101",
+    "scqf_level": "SCQF level 7"
   },
   "CS1006": {
     "name": "Programming Projects",
@@ -30,7 +32,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 7"
   },
   "CS1007": {
     "name": "Computer Systems Fundamentals",
@@ -41,7 +44,8 @@
     "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 7"
   },
   "CS2001": {
     "name": "Foundations of Computation",
@@ -52,7 +56,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS1002 AND PASS CS1003",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2101",
+    "scqf_level": "SCQF level 8"
   },
   "CS2002": {
     "name": "Computer Systems",
@@ -63,7 +68,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2001 OR PASS CS2101",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 8"
   },
   "CS2003": {
     "name": "The Internet and the Web: Concepts and Programming",
@@ -74,7 +80,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 8"
   },
   "CS2006": {
     "name": "Advanced Programming Projects",
@@ -85,7 +92,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2001 OR PASS CS2101",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 8"
   },
   "CS2101": {
     "name": "Foundations of Computation (Accelerated)",
@@ -96,7 +104,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS1002 OR TAKE CS1003 OR TAKE CS2001"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS1002 OR TAKE CS1003 OR TAKE CS2001",
+    "scqf_level": "SCQF level 8"
   },
   "CS3050": {
     "name": "Logic and Reasoning",
@@ -107,7 +116,8 @@
     "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE PY4612"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE PY4612",
+    "scqf_level": "SCQF level 9"
   },
   "CS3052": {
     "name": "Computational Complexity",
@@ -118,7 +128,8 @@
     "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND PASS CS3050 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE MT3852"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE MT3852",
+    "scqf_level": "SCQF level 9"
   },
   "CS3099": {
     "name": "Software Engineering Team Project",
@@ -129,7 +140,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "Whole Year",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE VP3135"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE VP3135",
+    "scqf_level": "SCQF level 9"
   },
   "CS3101": {
     "name": "Databases",
@@ -140,7 +152,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 9"
   },
   "CS3102": {
     "name": "Data Communications and Networks",
@@ -151,7 +164,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2101 OR PASS CS2001) AND (TAKE CS2003 OR AUDIT CS2003 AND DEMONSTRATE ENGAGING WITH RELEVANT CS2003 MATERIAL TO THE SATISFACTION OF HONOURS ADVISER)",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5020"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5020",
+    "scqf_level": "SCQF level 9"
   },
   "CS3104": {
     "name": "Operating Systems",
@@ -162,7 +176,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 9"
   },
   "CS3105": {
     "name": "Artificial Intelligence",
@@ -173,7 +188,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5010"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5010",
+    "scqf_level": "SCQF level 9"
   },
   "CS3106": {
     "name": "Human Computer Interaction",
@@ -184,7 +200,8 @@
     "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5040"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5040",
+    "scqf_level": "SCQF level 9"
   },
   "CS3302": {
     "name": "Data Encoding",
@@ -195,7 +212,8 @@
     "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 9"
   },
   "CS4052": {
     "name": "Logic and Software Verification",
@@ -206,7 +224,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3052",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4098": {
     "name": "Minor Software Project",
@@ -217,7 +236,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135",
     "semester": "Whole Year",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4099 OR TAKE CS4796 OR TAKE CS5199"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4099 OR TAKE CS4796 OR TAKE CS5199",
+    "scqf_level": "SCQF level 10"
   },
   "CS4099": {
     "name": "Major Software Project",
@@ -228,7 +248,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135",
     "semester": "Whole Year",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4796 OR TAKE CS5199"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4796 OR TAKE CS5199",
+    "scqf_level": "SCQF level 10"
   },
   "CS4102": {
     "name": "Computer Graphics",
@@ -239,7 +260,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4103": {
     "name": "Distributed Systems",
@@ -250,7 +272,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3102",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4105": {
     "name": "Advanced Communication Networks and Systems",
@@ -261,7 +284,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3102",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4201": {
     "name": "Programming Language Design and Implementation",
@@ -272,7 +296,8 @@
     "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4202": {
     "name": "Computer Architecture",
@@ -283,7 +308,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3104",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4203": {
     "name": "Computer Security",
@@ -294,7 +320,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4204": {
     "name": "Concurrency and Multi-Core Architectures",
@@ -305,7 +332,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3052 AND PASS CS3104",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4302": {
     "name": "Signal Processing: Sound, Image, Video",
@@ -316,7 +344,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4303": {
     "name": "Video Games",
@@ -327,7 +356,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4402": {
     "name": "Constraint Programming",
@@ -338,7 +368,8 @@
     "coursework_percent": 20,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2001 OR PASS CS2101 )",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 10"
   },
   "CS4796": {
     "name": "Joint Project (30cr)",
@@ -349,7 +380,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135,THE STUDENT REQUIRES A LETTER OF AGREEMENT",
     "semester": "Whole Year",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS5199"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS5199",
+    "scqf_level": "SCQF level 10"
   },
   "CS5001": {
     "name": "Object-Oriented Modelling, Design and Programming",
@@ -360,7 +392,8 @@
     "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5002"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5002",
+    "scqf_level": "SCQF level 11"
   },
   "CS5002": {
     "name": "Programming Principles and Practice",
@@ -371,7 +404,8 @@
     "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5001"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5001",
+    "scqf_level": "SCQF level 11"
   },
   "CS5003": {
     "name": "Masters Programming Projects",
@@ -382,7 +416,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST TAKE CS5002",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE IS5108"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE IS5108",
+    "scqf_level": "SCQF level 11"
   },
   "CS5012": {
     "name": "Language and Computation",
@@ -393,7 +428,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3052",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5014": {
     "name": "Machine Learning",
@@ -404,7 +440,8 @@
     "coursework_percent": 40,
     "prerequisites": "PGT: BEFORE TAKING THIS MODULE YOU MUST HAVE ACHIEVED A GRADE OF B OR HIGHER IN HIGHER OR A-LEVEL MATHS",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE ID5059"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE ID5059",
+    "scqf_level": "SCQF level 11"
   },
   "CS5015": {
     "name": "Symbolic Artificial Intelligence",
@@ -415,7 +452,8 @@
     "coursework_percent": 20,
     "prerequisites": "UG: BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (CS2001 OR CS2101)",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3050 OR TAKE CS3105"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3050 OR TAKE CS3105",
+    "scqf_level": "SCQF level 11"
   },
   "CS5016": {
     "name": "Uncertainty in Artificial Intelligence",
@@ -426,7 +464,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5020": {
     "name": "Principles of Computer Communication Systems",
@@ -437,7 +476,8 @@
     "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3102"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3102",
+    "scqf_level": "SCQF level 11"
   },
   "CS5030": {
     "name": "Fundamentals of Software Engineering",
@@ -448,7 +488,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND PASS CS2001 OR PASS CS2101",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3099"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3099",
+    "scqf_level": "SCQF level 11"
   },
   "CS5032": {
     "name": "Critical Systems Engineering",
@@ -459,7 +500,8 @@
     "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS3099",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5033": {
     "name": "Software Architecture and Design",
@@ -470,7 +512,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099,BEFORE TAKING THIS MODULE YOU MUST PASS CS5030",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5034": {
     "name": "Software Product and Project Management",
@@ -481,7 +524,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5035": {
     "name": "Software Quality",
@@ -492,7 +536,8 @@
     "coursework_percent": 40,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099,BEFORE TAKING THIS MODULE YOU MUST PASS CS5030",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5040": {
     "name": "Human Computer Interaction Principles and Methods",
@@ -503,7 +548,8 @@
     "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3106"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3106",
+    "scqf_level": "SCQF level 11"
   },
   "CS5041": {
     "name": "Interactive Software and Hardware",
@@ -514,7 +560,8 @@
     "coursework_percent": 100,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5042": {
     "name": "User-Centred Interaction Design",
@@ -525,7 +572,8 @@
     "coursework_percent": 100,
     "prerequisites": "UNDERGRADUATE STUDENTS - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101)",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5044": {
     "name": "Information Visualisation",
@@ -536,7 +584,8 @@
     "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE - BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND (PASS CS2001 OR PASS CS2101). PGT: CS5001 OR CS5002",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5052": {
     "name": "Data-Intensive Systems",
@@ -547,7 +596,8 @@
     "coursework_percent": 40,
     "prerequisites": "UNDERGRADUATE STUDENTS MUST HAVE PASSED CS2002 AND (CS2001 OR CS2101). POSTGRADUATE STUDENTS MUST PASS CS5001 BEFORE TAKING THIS MODULE",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5055": {
     "name": "Data Ethics and Privacy",
@@ -558,7 +608,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "CS5063": {
     "name": "Web Technologies",
@@ -569,7 +620,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "UG: YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2003"
+    "anti_requisites": "UG: YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS2003",
+    "scqf_level": "SCQF level 11"
   },
   "CS5199": {
     "name": "Individual Masters Project",
@@ -580,7 +632,8 @@
     "coursework_percent": 100,
     "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS3099 OR PASS VP3135",
     "semester": "1",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS4796"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS4098 OR TAKE CS4099 OR TAKE CS4796",
+    "scqf_level": "SCQF level 11"
   },
   "CS5201": {
     "name": "Special Project for Research Engineers",
@@ -591,7 +644,8 @@
     "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "2",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 11"
   },
   "ID5059": {
     "name": "Machine Learning for Data Analysis",
@@ -602,7 +656,8 @@
     "coursework_percent": 40,
     "prerequisites": "None",
     "semester": "2",
-    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5014"
+    "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS5014",
+    "scqf_level": "SCQF level 11"
   },
   "IS1901": {
     "name": "Information Technology 1",
@@ -613,6 +668,7 @@
     "coursework_percent": 100,
     "prerequisites": "None",
     "semester": "1",
-    "anti_requisites": "None"
+    "anti_requisites": "None",
+    "scqf_level": "SCQF level 7"
   }
 }

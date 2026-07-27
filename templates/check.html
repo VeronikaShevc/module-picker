@@ -23,6 +23,7 @@
                 <th>Module Code</th>
                 <th>Module Name</th>
                 <th>Status</th>
+                <th>SCQF Level</th>
                 <th>Prerequisites</th>
             </tr>
         </thead>
@@ -44,6 +45,7 @@
                         Unknown
                     {% endif %}
                 </td>
+                <td>{{modules[code].scqf_level}}</td>
                 <td>{{modules[code].prerequisites}}</td>
             </tr>
             {% endfor %}
