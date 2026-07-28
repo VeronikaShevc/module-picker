@@ -146,9 +146,9 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
 
     passed_set = set(passed)
 
-    if last_year is None:
+    if last_year is None or last_year == "None":
         last_year = infer_last_year(passed_set)
-
+    
     exam_percent = parse_number(exam_percent, int)
     coursework_percent = parse_number(coursework_percent, int)
     exam_duration = parse_number(exam_duration, float)
