@@ -14,7 +14,13 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-# --- Helper functions ---
+#Helper functions
+
+def parse_number(value, cast):
+    """Convert a query string to a number using the given type (int or
+    float), or return None if no value was given at all."""
+    return cast(value) if value else None
+
 
 def infer_last_year(passed_set):
     """Work out the student's last completed year by looking at the
@@ -58,6 +64,20 @@ def filter_by_last_year(data, last_year, mode):
             return data
 
     # No last_year given at all - don't filter anything.
+    return data
+
+
+def filter_by_assessment(data, is_results, exam_percent, coursework_percent, exam_duration):
+    """Filter modules or results by assessment criteria. `data` is either
+    the modules dict (keys map to module details) or the results dict
+    (keys map to a status string) - `is_results` tells us which, since
+    we always need to look up the real details from modules_data."""
+    if exam_percent is not None:
+        data = {code: value for code, value in data.items() if modules_data[code]["exam_percent"] == exam_percent}
+    if coursework_percent is not None:
+        data = {code: value for code, value in data.items() if modules_data[code]["coursework_percent"] == coursework_percent}
+    if exam_duration is not None:
+        data = {code: value for code, value in data.items() if modules_data[code]["exam_duration"] == exam_duration}
     return data
 
 
@@ -110,18 +130,11 @@ def get_module_status(code, details, passed_set, all_codes):
 async def read_item(request: Request, last_year: str = None, exam_percent: str = None, coursework_percent: str = None, exam_duration: str = None):
     """Homepage: show the checklist of modules a student can tick as passed."""
 
-    filtered = modules_data
-    exam_percent = int(exam_percent) if exam_percent else None
-    coursework_percent = int(coursework_percent) if coursework_percent else None
-    exam_duration = float(exam_duration) if exam_duration else None
+    exam_percent = parse_number(exam_percent, int)
+    coursework_percent = parse_number(coursework_percent, int)
+    exam_duration = parse_number(exam_duration, float)
 
-    if exam_percent is not None:
-        filtered = {code: details for code, details in filtered.items() if details["exam_percent"] == exam_percent}
-    if coursework_percent is not None:
-        filtered = {code: details for code, details in filtered.items() if details["coursework_percent"] == coursework_percent}
-    if exam_duration is not None:
-        filtered = {code: details for code, details in filtered.items() if details["exam_duration"] == exam_duration}
-
+    filtered = filter_by_assessment(modules_data, False, exam_percent, coursework_percent, exam_duration)
     filtered = filter_by_last_year(filtered, last_year, "checklist")
 
     return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year, "exam_percent": exam_percent, "exam_duration": exam_duration})
@@ -133,15 +146,18 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
 
     passed_set = set(passed)
 
-    exam_percent = int(exam_percent) if exam_percent else None
-    coursework_percent = int(coursework_percent) if coursework_percent else None
-    exam_duration = float(exam_duration) if exam_duration else None
+    if last_year is None:
+        last_year = infer_last_year(passed_set)
+
+    exam_percent = parse_number(exam_percent, int)
+    coursework_percent = parse_number(coursework_percent, int)
+    exam_duration = parse_number(exam_duration, float)
 
     # Special case: a brand new student hasn't passed anything yet, but
     # Year 1 modules are all compulsory and guaranteed by the programme
     # structure - so there's no real "eligibility" question here at all.
     if last_year == "0":
-        results = {code: "eligible" for code, details in modules_data.items() if code[2] == "1"}
+        results = {code: "eligible" for code, _ in modules_data.items() if code[2] == "1"}
         return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": {}})
 
     # Normal case: work out the status of every single module one at a time.
@@ -160,12 +176,6 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
 
     # Only show the modules relevant to what's coming next.
     results = filter_by_last_year(results, last_year, "results")
-
-    if exam_percent is not None:
-        results = {code: status for code, status in results.items() if modules_data[code]["exam_percent"] == exam_percent}
-    if coursework_percent is not None:
-        results = {code: status for code, status in results.items() if modules_data[code]["coursework_percent"] == coursework_percent}
-    if exam_duration is not None:
-        results = {code: status for code, status in results.items() if modules_data[code]["exam_duration"] == exam_duration}
+    results = filter_by_assessment(results, True, exam_percent, coursework_percent, exam_duration)
 
     return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": pending_info, "last_year": last_year})
