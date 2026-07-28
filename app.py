@@ -14,6 +14,18 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
+# --- Helper functions ---
+
+def infer_last_year(passed_set):
+    """Work out the student's last completed year by looking at the
+    highest year digit among the modules they've ticked as passed."""
+    max_year = 0
+    for element in passed_set:
+        if int(element[2]) > max_year:
+            max_year = int(element[2])
+    return str(max_year)
+
+
 def filter_by_last_year(data, last_year, mode):
     """Filter a list of modules down to only the ones relevant to a
     student's last completed year. 'checklist' mode shows everything up
@@ -87,10 +99,12 @@ def get_module_status(code, details, passed_set, all_codes):
         return "not_eligible", []
 
     except Exception:
-        # The prerequisite text couldn't be parsed at all (e.g. it's a
+        # The prerequisite text couldn't be parsed at all (it's a
         # grade requirement or mentions a module outside our data).
         return "unclear", []
 
+
+# Routes
 
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request, last_year: str = None, exam_percent: str = None, coursework_percent: str = None, exam_duration: str = None):
@@ -111,6 +125,7 @@ async def read_item(request: Request, last_year: str = None, exam_percent: str =
     filtered = filter_by_last_year(filtered, last_year, "checklist")
 
     return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year, "exam_percent": exam_percent, "exam_duration": exam_duration})
+
 
 @app.get("/check", response_class=HTMLResponse)
 async def check_eligibility(request: Request, passed: list[str] = Query(default=[]), last_year: str = Query(default=None), exam_percent: str = None, coursework_percent: str = None, exam_duration: str = None):
