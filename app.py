@@ -67,7 +67,7 @@ def filter_by_last_year(data, last_year, mode):
     return data
 
 
-def filter_by_assessment(data, is_results, exam_percent, coursework_percent, exam_duration):
+def filter_by_assessment(data, exam_percent, coursework_percent, exam_duration):
     """Filter modules or results by assessment criteria. `data` is either
     the modules dict (keys map to module details) or the results dict
     (keys map to a status string) - `is_results` tells us which, since
@@ -134,7 +134,7 @@ async def read_item(request: Request, last_year: str = None, exam_percent: str =
     coursework_percent = parse_number(coursework_percent, int)
     exam_duration = parse_number(exam_duration, float)
 
-    filtered = filter_by_assessment(modules_data, False, exam_percent, coursework_percent, exam_duration)
+    filtered = filter_by_assessment(modules_data, exam_percent, coursework_percent, exam_duration)
     filtered = filter_by_last_year(filtered, last_year, "checklist")
 
     return templates.TemplateResponse(request=request, name="index.html", context={"modules": filtered, "last_year": last_year, "exam_percent": exam_percent, "exam_duration": exam_duration})
@@ -176,6 +176,6 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
 
     # Only show the modules relevant to what's coming next.
     results = filter_by_last_year(results, last_year, "results")
-    results = filter_by_assessment(results, True, exam_percent, coursework_percent, exam_duration)
+    results = filter_by_assessment(results, exam_percent, coursework_percent, exam_duration)
 
     return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": pending_info, "last_year": last_year})
