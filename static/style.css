@@ -75,8 +75,32 @@ a {
     background-color: #ffe4a3;
 }
 
+.year-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
 .year-nav a {
-    margin-right: 12px;
+    padding: 8px 14px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.year-nav a:hover {
+    background-color: #e0e0e0;
+}
+
+.year-nav a.active {
+    background-color: #ac0095;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 select {
