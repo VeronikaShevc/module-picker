@@ -35,8 +35,10 @@
                     {% endif %}
                 </div>
                 {% for code, details in modules.items() %}
-                    <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}<br>
-                {% endfor %}        
+                    <label>
+                        <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}
+                    </label><br>
+                {% endfor %}   
                 <button type="submit">Check eligibility</button>
             </form>
         </ul>
