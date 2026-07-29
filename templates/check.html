@@ -10,11 +10,20 @@
         {% for code in passed %}
             <input type="hidden" name="passed" value="{{code}}">
         {% endfor %}
-        <label><input type="radio" name="exam_percent" value=""> Any assessment type</label>
-        <label><input type="radio" name="exam_percent" value="0"> 100% coursework</label>
-        <label><input type="radio" name="exam_percent" value="60"> 60% exam / 40% coursework</label>
-        <label><input type="radio" name="exam_percent" value="80"> 80% exam / 20% coursework</label>
-        <button type="submit">Update filter</button>
+        <select name="exam_percent" onchange="this.form.submit()">
+            <option value="" {% if not exam_percent %}selected{% endif %}>Any assessment type</option>
+            <option value="0" {% if exam_percent == 0 %}selected{% endif %}>100% coursework</option>
+            <option value="60" {% if exam_percent == 60 %}selected{% endif %}>60% exam / 40% coursework</option>
+            <option value="80" {% if exam_percent == 80 %}selected{% endif %}>80% exam / 20% coursework</option>
+        </select>
+        {% if exam_percent != 0 %}
+        <select name="exam_duration" onchange="this.form.submit()">
+            <option value="" {% if not exam_duration %}selected{% endif %}>Any duration</option>
+            <option value="2" {% if exam_duration == 2 %}selected{% endif %}>2 hours</option>
+            <option value="2.5" {% if exam_duration == 2.5 %}selected{% endif %}>2.5 hours</option>
+            <option value="3" {% if exam_duration == 3 %}selected{% endif %}>3 hours</option>
+        </select>
+        {% endif %}
     </form>
     <h1>Eligibility Check Results</h1>
     <table border="1">
