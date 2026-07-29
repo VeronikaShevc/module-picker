@@ -119,3 +119,16 @@ select {
 .status-already_passed {
     background-color: #d3d3d3;
 }
+
+label {
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+label:hover {
+    background-color: #ffe4a3;
+}
