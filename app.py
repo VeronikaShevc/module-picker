@@ -157,8 +157,9 @@ async def check_eligibility(request: Request, passed: list[str] = Query(default=
     # Year 1 modules are all compulsory and guaranteed by the programme
     # structure - so there's no real "eligibility" question here at all.
     if last_year == "0":
-        results = {code: "eligible" for code, _ in modules_data.items() if code[2] == "1"}
-        return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": {}})
+        results = {code: "eligible" for code, details in modules_data.items() if code[2] == "1"}
+        results = filter_by_assessment(results, exam_percent, coursework_percent, exam_duration)
+        return templates.TemplateResponse(request=request, name="check.html", context={"results": results, "passed": passed_set, "modules": modules_data, "pending_info": {}, "last_year": last_year, "exam_percent": exam_percent, "exam_duration": exam_duration})
 
     # Normal case: work out the status of every single module one at a time.
     results = {}
