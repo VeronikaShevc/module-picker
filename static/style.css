@@ -132,3 +132,19 @@ label {
 label:hover {
     background-color: #ffe4a3;
 }
+
+button {
+    background-color:#ac0095;
+    color: white;
+    display: block;
+    padding: 8px 10px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    
+}
+
+button:hover{
+    background-color:#c400ad;
+}
