@@ -72,5 +72,8 @@
             {% endfor %}
         </tbody>
     </table>
+    {% if not results %}
+        <p class="no-results">No modules match your current filters. Try adjusting your selections above.</p>
+    {% endif %}
 </body>
 </html>
