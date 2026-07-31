@@ -42,6 +42,7 @@
                 </div>
                 <button type="submit">Check eligibility</button>
                 <p id="selected-count">0 modules selected</p>
+                <div id="selected-list"></div>
                 {% for code, details in modules.items() %}
                     <label>
                         <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}
@@ -50,6 +51,9 @@
             </form>
         </ul>
     </div>
+    <script>
+        const allModuleNames = {{ modules | tojson }};
+    </script>
     <script src="/static/script.js"></script>
 </body>
 </html>
