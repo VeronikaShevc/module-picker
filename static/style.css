@@ -173,3 +173,11 @@ th {
     font-style: italic;
     font-size: 30px;
 }
+
+.intro-text {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+}
