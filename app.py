@@ -19,8 +19,9 @@ templates = Jinja2Templates(directory="templates")
 def parse_number(value, cast):
     """Convert a query string to a number using the given type (int or
     float), or return None if no value was given at all."""
-    return cast(value) if value else None
-
+    if not value or value == "None":
+        return None
+    return cast(value)
 
 def infer_last_year(passed_set):
     """Work out the student's last completed year by looking at the
