@@ -1,5 +1,5 @@
-from app import filter_by_last_year
-
+from app import filter_by_last_year, infer_last_year
+import pytest
 
 def test_checklist_shows_up_to_and_including_year():
     # finished Year 2 -> checklist shows Year 1 and Year 2 only
@@ -83,3 +83,33 @@ def test_checklist_invalid_last_year_returns_everything_unfiltered():
     data = {"CS1002": {}, "CS3050": {}}
     result = filter_by_last_year(data, "invalid", "checklist")
     assert result == data
+
+def test_infer_last_year_returns_highest_year_digit():
+    # given a set of passed modules, should return the highest year digit
+    passed_set = {"CS1002", "CS2001", "CS3050"}
+    result = infer_last_year(passed_set)
+    assert result == "3"
+
+def test_infer_last_year_with_empty_set_returns_zero():
+    # if no modules have been passed, should return "0"
+    passed_set = set()
+    result = infer_last_year(passed_set)
+    assert result == "0"
+
+def test_infer_last_year_with_mixed_numeric_and_non_numeric():
+    # if the year digit is mixed, it should return the highest numeric year
+    passed_set = {"CS1A02", "CS2001", "CS3C50"}
+    result = infer_last_year(passed_set)
+    assert result == "3"
+
+def test_infer_last_year_with_single_module():
+    # if only one module is passed, it should return its year digit
+    passed_set = {"CS2001"}
+    result = infer_last_year(passed_set)
+    assert result == "2"
+
+def test_infer_last_year_with_non_numeric_year_digit():
+    # if the year digit is non-numeric, it should raise a ValueError
+    passed_set = {"CSX001"}
+    with pytest.raises(ValueError):
+        infer_last_year(passed_set)
