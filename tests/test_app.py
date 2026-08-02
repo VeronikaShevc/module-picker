@@ -172,3 +172,64 @@ def test_get_module_status_not_eligible_due_to_anti_requisite():
     status, missing = get_module_status(code, details, passed_set, all_codes)
     assert status == "not_eligible"
     assert missing == []
+
+
+def test_get_module_status_eligible_when_anti_requisite_not_passed():
+    # same module as above, but the conflicting module was NOT passed -
+    # should be eligible, since there's no real conflict
+    code = "CS5030"
+    details = {
+        "prerequisites": "None",
+        "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3099"
+    }
+    passed_set = set()
+    all_codes = {"CS3099", "CS5030"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "eligible"
+    assert missing == []
+
+
+def test_get_module_status_unclear_when_anti_requisite_module_unknown():
+    # real CS3050-style: anti-requisite mentions PY4612, a module from
+    # a different subject we don't have data on - can't verify, so
+    # should be unclear, not silently assumed fine
+    code = "CS3050"
+    details = {
+        "prerequisites": "None",
+        "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE PY4612"
+    }
+    passed_set = set()
+    all_codes = {"CS3050"}  # PY4612 deliberately not included
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "unclear"
+    assert missing == []
+
+
+def test_get_module_status_unclear_when_prereq_cannot_be_parsed():
+    # real CS1002-style: prerequisite is a grade requirement, not a
+    # module code at all - the boolean parser has nothing to work with
+    code = "CS1002"
+    details = {
+        "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST HAVE MATHEMATICS (EITHER HIGHER OR A-LEVEL AT GRADE A OR BETTER)",
+        "anti_requisites": "None"
+    }
+    passed_set = set()
+    all_codes = {"CS1002"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "unclear"
+    assert missing == []
+
+
+def test_get_module_status_eligible_with_or_logic_satisfied():
+    # real CS2002-style: needs CS2001 OR CS2101 - student has only
+    # passed CS2101, which alone should be enough
+    code = "CS2002"
+    details = {
+        "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2001 OR PASS CS2101",
+        "anti_requisites": "None"
+    }
+    passed_set = {"CS2101"}
+    all_codes = {"CS2001", "CS2101", "CS2002"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "eligible"
+    assert missing == []
