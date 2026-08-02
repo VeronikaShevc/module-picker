@@ -1,4 +1,4 @@
-from app import filter_by_last_year, infer_last_year
+from app import filter_by_last_year, infer_last_year, get_module_status
 import pytest
 
 def test_checklist_shows_up_to_and_including_year():
@@ -84,6 +84,8 @@ def test_checklist_invalid_last_year_returns_everything_unfiltered():
     result = filter_by_last_year(data, "invalid", "checklist")
     assert result == data
 
+#----------
+
 def test_infer_last_year_returns_highest_year_digit():
     # given a set of passed modules, should return the highest year digit
     passed_set = {"CS1002", "CS2001", "CS3050"}
@@ -113,3 +115,60 @@ def test_infer_last_year_with_non_numeric_year_digit():
     passed_set = {"CSX001"}
     with pytest.raises(ValueError):
         infer_last_year(passed_set)
+
+#----------
+
+def test_get_module_status_eligible():
+    # module with no prerequisites should be eligible
+    code = "CS1002"
+    details = {"prerequisites": "None", "anti_requisites": "None"}
+    passed_set = set()
+    all_codes = {"CS1002"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "eligible"
+    assert missing == []
+
+
+def test_get_module_status_not_eligible_due_to_prereq():
+    # real CS3050-style prereq: needs CS2002 AND (CS2101 OR CS2001) -
+    # student has passed neither, so should be blocked
+    code = "CS3050"
+    details = {
+        "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )",
+        "anti_requisites": "None"
+    }
+    passed_set = set()
+    all_codes = {"CS2002", "CS2101", "CS2001", "CS3050"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "not_eligible"
+    assert missing == []
+
+
+def test_get_module_status_pending_due_to_same_year_prereq():
+    # real CS3052-style: needs CS2002 (already passed) AND CS3050 (a
+    # same-year module not yet taken) - should be pending, not blocked
+    code = "CS3052"
+    details = {
+        "prerequisites": "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND PASS CS3050",
+        "anti_requisites": "None"
+    }
+    passed_set = {"CS2002"}
+    all_codes = {"CS2002", "CS3050", "CS3052"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "pending"
+    assert missing == ["CS3050"]
+
+
+def test_get_module_status_not_eligible_due_to_anti_requisite():
+    # real CS5030-style: anti-requisite blocks it if CS3099 was passed,
+    # even though there are no prerequisites at all to satisfy
+    code = "CS5030"
+    details = {
+        "prerequisites": "None",
+        "anti_requisites": "YOU CANNOT TAKE THIS MODULE IF YOU TAKE CS3099"
+    }
+    passed_set = {"CS3099"}
+    all_codes = {"CS3099", "CS5030"}
+    status, missing = get_module_status(code, details, passed_set, all_codes)
+    assert status == "not_eligible"
+    assert missing == []
