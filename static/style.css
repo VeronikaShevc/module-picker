@@ -4,7 +4,7 @@ body {
     margin: 20px;
     color: #333;
     background-color: #f9f9f9;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     background-image: url('assets/background.jpg');
     background-size: cover;
@@ -196,4 +196,8 @@ th {
     flex: 1;
     position: sticky;
     top: 20px;
+}
+
+table {
+    font-size: 17px;
 }
