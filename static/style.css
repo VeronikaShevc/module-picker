@@ -181,3 +181,19 @@ th {
     font-size: 15px;
     line-height: 1.5;
 }
+
+.picker-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.checklist-column {
+    flex: 2;
+}
+
+.selections-column {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+}

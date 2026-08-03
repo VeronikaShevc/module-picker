@@ -42,12 +42,19 @@
                 </div>
                 <button type="submit">Check eligibility</button>
                 <p id="selected-count">0 modules selected</p>
-                <div id="selected-list"></div>
-                {% for code, details in modules.items() %}
-                    <label>
-                        <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}
-                    </label><br>
-                {% endfor %}   
+                <div class="picker-layout">
+                    <div class="checklist-column">
+                        {% for code, details in modules.items() %}
+                            <label>
+                                <input type="checkbox" name="passed" value="{{code}}"> {{code}} - {{details.name}}
+                            </label><br>
+                        {% endfor %}
+                    </div>
+                    <div class="selections-column">
+                        <p id="selected-count">0 modules selected</p>
+                        <div id="selected-list"></div>
+                    </div>
+                </div>
             </form>
         </ul>
     </div>
