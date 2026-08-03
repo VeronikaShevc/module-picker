@@ -1,4 +1,4 @@
-from app import filter_by_last_year, infer_last_year, get_module_status
+from app import filter_by_last_year, infer_last_year, get_module_status, filter_by_assessment, modules_data
 import pytest
 
 def test_checklist_shows_up_to_and_including_year():
@@ -233,3 +233,45 @@ def test_get_module_status_eligible_with_or_logic_satisfied():
     status, missing = get_module_status(code, details, passed_set, all_codes)
     assert status == "eligible"
     assert missing == []
+
+#----------
+
+def test_filter_by_assessment_filters_correctly():
+    # given a set of modules, should filter by the specified assessment criteria
+    data = {
+        "CS1002": {}, "CS2001": {}, "CS3050": {}, "CS4099": {},
+    }
+    # Assume modules_data has been defined in app.py with appropriate values
+    result = filter_by_assessment(data, exam_percent=60, coursework_percent=None, exam_duration=None)
+    # Check that only modules with exam_percent == 50 are included
+    for code in result.keys():
+        assert modules_data[code]["exam_percent"] == 60
+
+def test_filter_by_assessment_no_filters_returns_all():
+    # if no assessment criteria are specified, should return all modules unfiltered
+    data = {
+        "CS1002": {}, "CS2001": {}, "CS3050": {}, "CS4099": {},
+    }
+    result = filter_by_assessment(data, exam_percent=None, coursework_percent=None, exam_duration=None)
+    assert result == data
+
+def test_filter_by_assessment_multiple_filters():
+    # should filter by multiple criteria simultaneously - using a real
+    # combination that actually exists in the data (60/40 split, 2.5hr exam)
+    data = {
+        "CS1002": {}, "CS2001": {}, "CS3050": {}, "CS4099": {},
+    }
+    result = filter_by_assessment(data, exam_percent=60, coursework_percent=40, exam_duration=2.5)
+    assert len(result) > 0  # make sure the loop below actually has something to check
+    for code in result.keys():
+        assert modules_data[code]["exam_percent"] == 60
+        assert modules_data[code]["coursework_percent"] == 40
+        assert modules_data[code]["exam_duration"] == 2.5
+    
+def test_filter_by_assessment_no_matching_modules():
+    # if no modules match the specified criteria, should return an empty dict
+    data = {
+        "CS1002": {}, "CS2001": {}, "CS3050": {}, "CS4099": {},
+    }
+    result = filter_by_assessment(data, exam_percent=99, coursework_percent=99, exam_duration=99)
+    assert result == {}
