@@ -46,3 +46,7 @@ pip install -r requirements.txt
 uvicorn app:app --reload
 
 Then open `http://localhost:8000` in your browser.
+
+## Running the tests
+
+pytest tests/ -v
