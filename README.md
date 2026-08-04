@@ -50,3 +50,18 @@ Then open `http://localhost:8000` in your browser.
 ## Running the tests
 
 pytest tests/ -v
+
+## Known limitations
+
+- Scoped to single Honours BSc/MSci Computer Science - joint Honours
+  combinations and other departments' modules aren't accounted for.
+- Direct entry to Year 2 (students who skip Year 1 via the accelerated
+  CS2101 module) isn't fully supported yet in the year-selection flow.
+- A handful of modules have prerequisite or anti-requisite text that can't
+  be reliably parsed - either because it references a module outside this
+  dataset, or because it's a subjective/non-module condition (e.g. a grade
+  requirement). These are marked **unclear** rather than guessed at.
+- The weekly contact hours parser correctly structures around 70% of
+  modules' schedule text; the rest fall back to the raw catalogue text.
+- No support yet for postgraduate-specific (PGT) prerequisite rules where
+  they differ from the undergraduate ones.
