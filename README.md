@@ -29,3 +29,20 @@ wrong. This tool automates that process.
   prerequisite text can't be reliably parsed)
 - Filters by year, assessment type, and exam duration
 - Remembers your selections across filter changes using local storage
+
+## Tech stack
+
+- **Backend:** Python, FastAPI
+- **Templating:** Jinja2
+- **Scraping:** BeautifulSoup, requests
+- **Frontend:** HTML, CSS, vanilla JavaScript
+- **Testing:** pytest
+
+## How to run it locally
+
+git clone https://github.com/VeronikaShevc/module-picker.git
+cd module-picker
+pip install -r requirements.txt
+uvicorn app:app --reload
+
+Then open `http://localhost:8000` in your browser.
