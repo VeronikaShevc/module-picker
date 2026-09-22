@@ -1,6 +1,8 @@
 def tokenize(text):
-    text = text.replace("(", " ( ").replace(")", " ) ")  # separate brackets from words
-    tokens = text.split()  # split on whitespace, ignore extra spaces
+    # separate brackets from words
+    text = text.replace("(", " ( ").replace(")", " ) ")
+    # split on whitespace, ignore extra spaces
+    tokens = text.split()
     return tokens
 
 def is_module_code(token):
