@@ -27,29 +27,81 @@ def split_ug_pgt(text):
     else: 
         return text, None
 
+def tokenize(text):
+    # separate brackets from words
+    text = text.replace("(", " ( ").replace(")", " ) ")
+    # split on whitespace, ignore extra spaces
+    tokens = text.split()
+    return tokens
 
-def substitute_booleans(text, passed_modules, all_codes):
-    """Replace every module code in the text with True or False, 
-    depending on whether it's been passed."""
-    mentioned = find_codes_in_string(text, all_codes)
-    for code in mentioned:
-        if code in passed_modules:
-            text = text.replace(code, "True")
-        else:
-            text = text.replace(code, "False")
-    return text
+def is_module_code(token):
+    # 2 letters + 4 digits
+    if len(token) == 6 and token[:2].isupper() and token[2:6].isdigit():
+        return True
+    return False
 
-def clean_prereq_string(text, all_codes):
-    """Strip out filler English words, 
-    keeping only module codes, AND, OR, and brackets."""
-    text = text.replace(",", " AND ")
-    words = text.replace("(", " ( ").replace(")", " ) ").split()
-    keep = []
-    for word in words:
-        cleaned_word = word.strip(".,")
-        if cleaned_word in all_codes or word in ["AND", "OR", "(", ")"]:
-            keep.append(cleaned_word if cleaned_word in all_codes else word)
-    return " ".join(keep)
+def filter_meaningful_tokens(tokens, all_codes):
+    # filter out filler words, keeping only module codes, AND, OR, and brackets
+    meaningful_tokens = []
+    for token in tokens:
+        cleaned_token = token.strip(".,")
+        if token in ["AND", "OR", "(", ")"]:
+            meaningful_tokens.append(token)
+        elif is_module_code(cleaned_token):
+            if cleaned_token not in all_codes:
+                # raise an error if the module code is not in the known list
+                raise NameError(f"name '{cleaned_token}' is not defined")
+            meaningful_tokens.append(cleaned_token)
+    return meaningful_tokens
+
+def evaluate_factor(tokens, position, passed_modules):
+    # evaluate a single factor, which can be a module code or a parenthesized expression
+    if position[0] >= len(tokens):
+        raise SyntaxError("Unexpected end of prerequisite text - missing a module code")
+
+    current_token = tokens[position[0]]
+
+    if current_token == "(":
+        position[0] += 1  # skip (
+        result = evaluate_or(tokens, position, passed_modules)  # recurse into bracket contents
+        position[0] += 1  # skip )
+        return result
+    elif current_token in ["AND", "OR", ")"]:
+        # ran into an operator or closing bracket where a module code was expected
+        raise SyntaxError(f"Unexpected token '{current_token}' where a module code was expected")
+    else:
+        position[0] += 1  # skip the code itself
+        return current_token in passed_modules
+
+def evaluate_and(tokens, position, passed_modules):
+    # evaluate the first factor
+    result = evaluate_factor(tokens, position, passed_modules)
+
+    # evaluate the rest of the AND chain
+    while position[0] < len(tokens) and tokens[position[0]] == "AND":
+        position[0] += 1  # skip "AND"
+        next_result = evaluate_factor(tokens, position, passed_modules)
+        result = result and next_result
+
+    return result
+
+
+def evaluate_or(tokens, position, passed_modules):
+    result = evaluate_and(tokens, position, passed_modules)  # AND binds tighter, so start there
+
+    while position[0] < len(tokens) and tokens[position[0]] == "OR":
+        position[0] += 1  # skip "OR"
+        next_result = evaluate_and(tokens, position, passed_modules)
+        result = result or next_result
+
+    return result
+
+
+def evaluate_prereq_tokens(tokens, passed_modules):
+    # evaluate the OR chain at the top level
+    position = [0]
+    return evaluate_or(tokens, position, passed_modules)
+
 
 def get_necessary_missing(text, passed_modules, all_codes):
     """Return only the missing module codes 
@@ -65,11 +117,12 @@ def get_necessary_missing(text, passed_modules, all_codes):
             necessary.append(code)
     return necessary
 
+
 def evaluate_prereq(text, passed_modules, all_codes):
-    """Evaluate whether a prerequisite string is satisfied, given a set of passed modules."""
+    """Evaluate whether a prerequisite string is satisfied, given a
+    set of passed modules. This is the real parser (tokenize -> filter
+    -> recursive evaluate) - no eval() involved anywhere."""
     ug_text, pgt_text = split_ug_pgt(text)
-    cleaned = clean_prereq_string(ug_text, all_codes)
-    substituted = substitute_booleans(cleaned, passed_modules, all_codes)
-    substituted = substituted.replace("AND", "and").replace("OR", "or")
-    result = eval(substituted)
-    return result
+    tokens = tokenize(ug_text)
+    meaningful_tokens = filter_meaningful_tokens(tokens, all_codes)
+    return evaluate_prereq_tokens(meaningful_tokens, passed_modules)

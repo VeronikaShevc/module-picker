@@ -72,7 +72,7 @@ def test_external_module_in_prerequisite_raises():
     prereq = "PASS CS3099 OR PASS VP3135"
     passed = set()
     all_codes = ["CS3099"]
-    with pytest.raises(SyntaxError):
+    with pytest.raises(NameError):
         evaluate_prereq(prereq, passed, all_codes)
 
 
