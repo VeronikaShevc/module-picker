@@ -1,28 +1,75 @@
 def tokenize(text):
-    text = text.replace("(", " ( ").replace(")", " ) ")
-    tokens = text.split()
+    text = text.replace("(", " ( ").replace(")", " ) ")  # separate brackets from words
+    tokens = text.split()  # split on whitespace, ignore extra spaces
     return tokens
 
-result3 = tokenize("BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )")
-print(result3)
-
 def is_module_code(token):
+    # 2 letters + 4 digits
     if len(token) == 6 and token[:2].isupper() and token[2:6].isdigit():
         return True
     return False
 
-
-print(is_module_code("CS2002"))  # should be True
-print(is_module_code("AND"))     # should be False
-print(is_module_code("("))       # should be False
-
 def filter_meaningful_tokens(tokens):
+    # filter out filler words, keeping only module codes, AND, OR, and brackets
     meaningful_tokens = []
     for token in tokens:
-        if is_module_code(token) or token in ["AND", "OR", "(", ")"]:
+        if is_module_code(token) or token in ["AND", "OR", "(", ")"]:  # keep only real logic
             meaningful_tokens.append(token)
     return meaningful_tokens
 
-tokens = tokenize("BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )")
-result = filter_meaningful_tokens(tokens)
-print(result)
+
+def evaluate_factor(tokens, position, passed_modules):
+    current_token = tokens[position[0]]
+
+    if current_token == "(":
+        # skip (
+        position[0] += 1
+        # recurse into bracket contents
+        result = evaluate_or(tokens, position, passed_modules)
+        # skip )
+        position[0] += 1
+        return result
+    else:
+        # skip the code itself
+        position[0] += 1
+        return current_token in passed_modules
+
+
+def evaluate_and(tokens, position, passed_modules):
+    # evaluate the first factor
+    result = evaluate_factor(tokens, position, passed_modules)
+
+    # evaluate the rest of the AND chain
+    while position[0] < len(tokens) and tokens[position[0]] == "AND":
+        position[0] += 1  # skip "AND"
+        next_result = evaluate_factor(tokens, position, passed_modules)
+        result = result and next_result
+
+    return result
+
+
+def evaluate_or(tokens, position, passed_modules):
+    result = evaluate_and(tokens, position, passed_modules)  # AND binds tighter, so start there
+
+    while position[0] < len(tokens) and tokens[position[0]] == "OR":
+        position[0] += 1  # skip "OR"
+        next_result = evaluate_and(tokens, position, passed_modules)
+        result = result or next_result
+
+    return result
+
+
+def evaluate_prereq_tokens(tokens, passed_modules):
+    # evaluate the OR chain at the top level
+    position = [0]
+    return evaluate_or(tokens, position, passed_modules)
+
+
+if __name__ == "__main__":
+    raw = "BEFORE TAKING THIS MODULE YOU MUST PASS CS2002 AND ( PASS CS2101 OR PASS CS2001 )"
+    tokens = filter_meaningful_tokens(tokenize(raw))
+    print(tokens)
+
+    print(evaluate_prereq_tokens(tokens, {"CS2002", "CS2101"}))  # True
+    print(evaluate_prereq_tokens(tokens, {"CS2002"}))              # False
+    print(evaluate_prereq_tokens(tokens, {"CS2002", "CS2001"}))  # True
